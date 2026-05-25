@@ -444,6 +444,24 @@
             </div>
           </a>
 
+          <a href="recipes/amaretto-sour.html"
+             class="recipe-card"
+             data-categories="drink,cocktail,no-cook">
+            <div class="card-img">
+              <img src="assets/images/amaretto-sour.jpg" alt="Amaretto sour with thick velvety white foam in a chilled coupe glass, lemon twist and brandied cherry garnish, scattered allspice berries on a walnut board" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div class="card-tags" data-tag-slots></div>
+              <h2 class="card-title">Amaretto Sour with Allspice &amp; Chocolate</h2>
+              <p class="card-desc">An elevated sour with rye, allspice dram, and chocolate bitters. Velvety egg-white foam, warm baking-spice depth, served straight up.</p>
+              <div class="card-meta">
+                <span><span class="label">Prep</span> 3 min</span>
+                <span><span class="label">Shake</span> 30 sec</span>
+                <span><span class="label">Makes</span> 1</span>
+              </div>
+            </div>
+          </a>
+
           <a href="recipes/toms-sweet-bbq-sauce.html"
              class="recipe-card"
              data-categories="condiment,sauce,no-cook">
@@ -495,12 +513,14 @@
         dessert: 'Dessert',
         breakfast: 'Breakfast',
         condiment: 'Condiment',
+        drink: 'Drink',
         beef: 'Beef',
         chicken: 'Chicken',
         pork: 'Pork',
         pasta: 'Pasta',
         vegetarian: 'Vegetarian',
         sauce: 'Sauce',
+        cocktail: 'Cocktail',
         grill: 'Grill',
         'air-fryer': 'Air Fryer',
         oven: 'Oven',
@@ -509,6 +529,7 @@
         smoker: 'Smoker',
         'no-cook': 'No Cook',
         'one-pot': 'One Pot',
+        shake: 'Shake',
       };
 
       // Each tag belongs to one of three columns so cards line up across the grid:
@@ -520,14 +541,16 @@
         // Col 1 — course type
         appetizer: 1, main: 1, side: 1, salad: 1, soup: 1,
         dessert: 1, breakfast: 1, brunch: 1, snack: 1, sandwich: 1,
-        condiment: 1,
-        // Col 2 — protein / main ingredient (or dish type for condiments)
+        condiment: 1, drink: 1,
+        // Col 2 — protein / main ingredient (or dish type for condiments/drinks)
         seafood: 2, beef: 2, chicken: 2, pork: 2, lamb: 2, turkey: 2,
         pasta: 2, vegetarian: 2, vegan: 2, egg: 2,
         sauce: 2, dressing: 2, rub: 2, marinade: 2,
+        cocktail: 2, mocktail: 2, coffee: 2, tea: 2,
         // Col 3 — cooking method
         grill: 3, 'air-fryer': 3, oven: 3, bake: 3, stovetop: 3,
         'slow-cooker': 3, smoker: 3, 'no-cook': 3, 'one-pot': 3, roast: 3, fry: 3,
+        shake: 3, stir: 3, blend: 3,
       };
 
       const FILTER_THRESHOLD = 4; // show filter UI once there are this many recipes
