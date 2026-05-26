@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom's Beer Can Chicken — Tom's Kitchen</title>
+    <meta name="description" content="Boneless Boston butt with a mustard binder and rub crust, smoked low and slow, then pan-braised at the stall in butter, agave, and apple juice until pull-tender." />
+    <meta property="og:title" content="Tom's Beer Can Chicken — Tom's Kitchen" />
+    <meta property="og:description" content="Whole chicken propped on a half-can of bourbon barrel stout, slow-smoked over apple and pecan wood. Bold but mild rub with a spicy version option." />
+    <meta property="og:image" content="../assets/images/toms-beer-can-chicken.jpg" />
+    <meta property="og:type" content="article" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Libre+Caslon+Text:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%8D%B4%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #f5efe2;
+        --paper: #fbf6ea;
+        --surface: #ffffff;
+        --ink: #3a2f24;
+        --ink-muted: #7a6a58;
+        --ink-faint: #b8a78f;
+        --rule: #d9cdb6;
+        --rule-soft: #e8ddc5;
+        --accent: #16365D;
+        --accent-deep: #0E2542;
+        --accent-soft: #2c4f7a;
+        --tomato: #B85C3A;
+        --display: 'Libre Caslon Text', Georgia, serif;
+        --hand: 'Caveat', cursive;
+        --body: 'Work Sans', -apple-system, sans-serif;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+      body {
+        font-family: var(--body);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--ink);
+        background: var(--bg);
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(196, 74, 53, 0.04) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(92, 127, 86, 0.05) 0%, transparent 50%);
+        min-height: 100vh;
+      }
+      a { color: inherit; }
+      img { display: block; max-width: 100%; }
+
+      .container { max-width: 880px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+      }
+
+      /* Header */
+      header.site {
+        padding: 2rem 0 1.5rem;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      .brand-logo {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+      .brand-divider {
+        width: 1px;
+        height: 28px;
+        background: var(--rule);
+      }
+      .brand-wordmark {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .brand-wordmark .top {
+        font-family: var(--display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+      }
+      .brand-wordmark .bottom {
+        font-family: var(--display);
+        font-size: 0.8rem;
+        font-style: italic;
+        color: var(--ink-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-top: 3px;
+      }
+      @media (max-width: 480px) {
+        .brand-logo { height: 32px; }
+        .brand-wordmark .top { font-size: 1rem; }
+        .brand-wordmark .bottom { font-size: 0.7rem; }
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+      }
+      .nav-links a {
+        color: inherit;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: color 200ms, border-color 200ms;
+      }
+      .nav-links a:hover {
+        color: var(--accent-deep);
+        border-bottom-color: var(--accent);
+      }
+      @media (max-width: 720px) { .nav-links { display: none; } }
+
+      /* Back link */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: color 200ms;
+      }
+      .back-link:hover { color: var(--accent-deep); }
+
+      /* Hero photo */
+      .recipe-hero {
+        max-width: 720px;
+        margin: 1.5rem auto 0;
+        padding: 0 clamp(1.5rem, 4vw, 3rem);
+        display: flex;
+        justify-content: center;
+      }
+      .recipe-hero-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--rule);
+        background: var(--surface);
+        box-shadow: 0 8px 32px rgba(58, 47, 36, 0.10);
+      }
+      .recipe-hero-img img {
+        width: 100%; height: 100%; object-fit: cover; object-position: center;
+        display: block;
+      }
+
+      /* Title block */
+      .title-block {
+        text-align: center;
+        padding: 3rem 0 1.5rem;
+      }
+      .kicker {
+        font-family: var(--hand);
+        font-size: 1.5rem;
+        color: var(--tomato);
+        margin-bottom: 0.5rem;
+        transform: rotate(-2deg);
+        display: inline-block;
+      }
+      h1 {
+        font-family: var(--display);
+        font-size: clamp(2.25rem, 1.4rem + 3vw, 3.75rem);
+        line-height: 1.05;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        margin-bottom: 1rem;
+        text-wrap: balance;
+        font-style: italic;
+      }
+      .lede {
+        font-size: 1.125rem;
+        line-height: 1.55;
+        color: var(--ink-muted);
+        max-width: 56ch;
+        margin: 0 auto;
+      }
+
+      /* Meta strip */
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        overflow: hidden;
+        margin-top: 2.5rem;
+      }
+      .meta-cell {
+        padding: 1rem 1.25rem;
+        text-align: center;
+        border-right: 1px solid var(--rule-soft);
+      }
+      .meta-cell:last-child { border-right: none; }
+      @media (max-width: 560px) {
+        .meta-cell { border-right: none; border-bottom: 1px solid var(--rule-soft); }
+        .meta-cell:last-child { border-bottom: none; }
+      }
+      .meta-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.25rem;
+      }
+      .meta-value {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.375rem;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+      .meta-value small {
+        font-family: var(--body);
+        font-style: normal;
+        font-size: 0.8125rem;
+        color: var(--ink-muted);
+      }
+
+      /* Servings selector */
+      .servings-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .servings-label { font-size: 0.875rem; color: var(--ink-muted); }
+      .servings-label strong { color: var(--ink); font-weight: 600; font-family: var(--display); font-style: italic; font-size: 1rem; }
+      .servings-control { display: flex; align-items: center; gap: 0.5rem; }
+      .step-btn {
+        width: 36px; height: 36px;
+        border-radius: 999px;
+        border: 1px solid var(--rule);
+        background: var(--surface);
+        color: var(--ink);
+        font-size: 1.125rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 180ms ease;
+      }
+      .step-btn:hover:not(:disabled) {
+        border-color: var(--accent);
+        color: var(--accent-deep);
+      }
+      .step-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+      select.servings-select {
+        font-family: var(--body);
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.5rem 2rem 0.5rem 1rem;
+        border: 1px solid var(--rule);
+        background-color: var(--surface);
+        color: var(--ink);
+        border-radius: 999px;
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%237a6a58'%3e%3cpath d='M5 8l5 5 5-5z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 0.5rem center;
+        background-size: 1.1em;
+        transition: all 180ms ease;
+      }
+      select.servings-select:hover,
+      select.servings-select:focus {
+        border-color: var(--accent);
+        outline: none;
+      }
+
+      /* Section headings */
+      h2 {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem);
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: var(--ink);
+      }
+      h2 .accent { color: var(--tomato); font-style: italic; }
+      h3 {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: var(--ink-muted);
+        margin: 1.5rem 0 0.75rem;
+      }
+      h3:first-child { margin-top: 0; }
+
+      /* Two-col layout for ingredients/tools */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: clamp(1.5rem, 4vw, 2.5rem);
+        margin-top: 3rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--rule);
+      }
+      @media (max-width: 720px) {
+        .two-col { grid-template-columns: 1fr; }
+      }
+      .ing-list, .tool-list {
+        list-style: none;
+      }
+      .ing-list li {
+        display: grid;
+        grid-template-columns: 6.5rem 1fr;
+        gap: 0.75rem;
+        padding: 0.55rem 0;
+        border-bottom: 1px dashed var(--rule-soft);
+        font-size: 0.95rem;
+      }
+      .ing-list li:last-child { border-bottom: none; }
+      .ing-list .qty {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.0625rem;
+        color: var(--accent-deep);
+        font-weight: 400;
+      }
+      .ing-list .item { color: var(--ink); }
+      .ing-group {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 0.95rem;
+        color: var(--tomato);
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid var(--rule-soft);
+        letter-spacing: 0.02em;
+      }
+      .ing-group:first-child { margin-top: 0; }
+      .tool-list li {
+        padding: 0.4rem 0 0.4rem 1.25rem;
+        position: relative;
+        font-size: 0.95rem;
+        color: var(--ink-muted);
+      }
+      .tool-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0.25rem;
+        color: var(--tomato);
+        font-weight: 600;
+      }
+
+      /* Method section */
+      .section {
+        margin-top: 3rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      /* Steps */
+      ol.steps {
+        list-style: none;
+        counter-reset: step;
+      }
+      ol.steps li {
+        position: relative;
+        padding-left: 3rem;
+        padding-bottom: 1.5rem;
+        counter-increment: step;
+      }
+      ol.steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: -0.125rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        color: var(--tomato);
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.125rem;
+        font-weight: 400;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+      ol.steps li p { margin-bottom: 0.5rem; }
+      ol.steps li p:last-child { margin-bottom: 0; }
+      ol.steps li p.step-note {
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+        font-style: italic;
+        background: var(--paper);
+        padding: 0.75rem 1rem;
+        border-left: 3px solid var(--accent);
+        border-radius: 4px;
+        margin-top: 0.5rem;
+      }
+
+      /* Stages (cook section) */
+      .stage {
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .stage-title {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .stage-num {
+        font-family: var(--hand);
+        font-size: 2rem;
+        color: var(--tomato);
+        line-height: 1;
+      }
+      .stage-name {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.25rem;
+        color: var(--ink);
+      }
+      .stage ul {
+        list-style: none;
+        padding: 0;
+      }
+      .stage li {
+        padding: 0.35rem 0 0.35rem 1.25rem;
+        position: relative;
+        font-size: 0.95rem;
+      }
+      .stage li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      /* Plating callout */
+      .plating {
+        margin-top: 2rem;
+        padding: 1.75rem 2rem;
+        background: linear-gradient(135deg, rgba(196, 74, 53, 0.07), rgba(92, 127, 86, 0.07));
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        text-align: center;
+      }
+      .plating-kicker {
+        font-family: var(--hand);
+        font-size: 1.5rem;
+        color: var(--tomato);
+        margin-bottom: 0.5rem;
+        transform: rotate(-1deg);
+        display: inline-block;
+      }
+      .plating p {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.125rem;
+        line-height: 1.55;
+        color: var(--ink);
+        max-width: 58ch;
+        margin: 0 auto;
+      }
+      .plating p strong { font-family: var(--body); font-style: normal; font-weight: 600; }
+
+      /* Sauce pairing card */
+      .pairing {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 1.5rem;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        transition: all 200ms ease;
+      }
+      .pairing:hover {
+        border-color: var(--accent);
+        box-shadow: 0 6px 24px rgba(58, 47, 36, 0.10);
+        transform: translateY(-2px);
+      }
+      .pairing-img {
+        background: var(--surface);
+        overflow: hidden;
+      }
+      .pairing-img img {
+        width: 100%; height: 100%; object-fit: cover; object-position: center;
+      }
+      .pairing-body {
+        padding: 1.25rem 1.5rem 1.25rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .pairing-kicker {
+        font-family: var(--hand);
+        font-size: 1.25rem;
+        color: var(--tomato);
+        margin-bottom: 0.25rem;
+        transform: rotate(-1deg);
+        display: inline-block;
+      }
+      .pairing-title {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.375rem;
+        color: var(--ink);
+        margin-bottom: 0.35rem;
+      }
+      .pairing-desc {
+        font-size: 0.925rem;
+        color: var(--ink-muted);
+        line-height: 1.5;
+        margin: 0;
+      }
+      .pairing-cta {
+        margin-top: 0.5rem;
+        font-size: 0.825rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 600px) {
+        .pairing { grid-template-columns: 1fr; }
+        .pairing-img { aspect-ratio: 16/9; }
+        .pairing-body { padding: 1.25rem 1.5rem; }
+      }
+
+      /* Tips */
+      .tips {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .tip {
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        padding: 1.125rem 1.25rem;
+      }
+      .tip strong {
+        display: block;
+        font-family: var(--display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.0625rem;
+        color: var(--ink);
+        margin-bottom: 0.35rem;
+      }
+      .tip p {
+        font-size: 0.9rem;
+        color: var(--ink-muted);
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* Print button */
+      .actions-row {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .action-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--surface);
+        color: var(--ink);
+        text-decoration: none;
+        padding: 0.625rem 1.125rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid var(--rule);
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 200ms;
+      }
+      .action-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent-deep);
+      }
+
+      /* Footer */
+      footer.site {
+        padding: 3rem 0 2.5rem;
+        text-align: center;
+        font-size: 0.8125rem;
+        color: var(--ink-faint);
+        border-top: 1px solid var(--rule);
+        margin-top: 4rem;
+      }
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+        margin-bottom: 0.5rem;
+      }
+      .footer-logo {
+        height: 28px;
+        width: auto;
+        opacity: 0.9;
+      }
+      .footer-brand-text {
+        font-family: var(--display);
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+      }
+      .heart { color: var(--tomato); }
+
+      /* Print styles */
+      @media print {
+        body { background: white; color: black; }
+        header.site, footer.site, .servings-bar, .actions-row, .back-link, .nav-links { display: none !important; }
+        .title-block { padding-top: 0.5rem; }
+        .meta { background: white; }
+        .stage, .tip, .plating, .pairing, .paper { background: white !important; border: 1px solid #ddd !important; }
+        h1 { font-size: 1.8rem; }
+        .section, .two-col { page-break-inside: avoid; }
+        .recipe-hero {
+          max-width: 100% !important;
+          margin: 0 auto 0.5rem !important;
+          padding: 0 !important;
+          page-break-inside: avoid;
+        }
+        .recipe-hero-img {
+          width: 55% !important;
+          margin: 0 auto;
+          aspect-ratio: 1/1 !important;
+          border-radius: 8px !important;
+          border: 1px solid #ccc !important;
+          box-shadow: none !important;
+        }
+        .recipe-hero-img img {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        @page { margin: 1.5cm; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="container nav">
+        <a href="../index.html" class="brand" aria-label="Tom's Kitchen home">
+          <img class="brand-logo" src="../assets/images/tg-monogram.png" alt="TG monogram" />
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-wordmark">
+            <span class="top">Tom's Kitchen</span>
+            <span class="bottom">Recipes</span>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="../index.html#recipes">Recipes</a>
+          <a href="../index.html#about">About</a>
+        </nav>
+      </div>
+      <div class="container">
+        <a href="../index.html" class="back-link">← Back to all recipes</a>
+      </div>
+    </header>
+
+    <section class="recipe-hero">
+      <div class="recipe-hero-img">
+        <img src="../assets/images/toms-beer-can-chicken.jpg" alt="Whole upright smoked chicken with mahogany skin propped on a half can of bourbon barrel stout on a walnut board with a stoneware ramekin of pan jus, lemon, rosemary, and a scatter of smoked paprika and pepper" />
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="title-block">
+        <div class="kicker">bold &amp; juicy &mdash;</div>
+        <h1>Tom&rsquo;s Beer Can Chicken</h1>
+        <p class="lede">
+          Whole chicken propped on a half-can of bourbon barrel stout and slow-smoked
+          over apple and pecan wood in the electric smoker. Strong, malty beer steams
+          the bird from the inside while a bold-but-mild rub builds a deep mahogany
+          crust outside. A spicy version is built in for when you want it to bite back.
+        </p>
+      </section>
+
+      <div class="meta">
+        <div class="meta-cell">
+          <div class="meta-label">Serves</div>
+          <div class="meta-value" id="meta-servings">4</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Prep</div>
+          <div class="meta-value">15 <small>min</small></div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Smoke</div>
+          <div class="meta-value">2.5&ndash;3 <small>hr</small></div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Rest</div>
+          <div class="meta-value">10 <small>min</small></div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Smoker</div>
+          <div class="meta-value">275 <small>&deg;F</small></div>
+        </div>
+      </div>
+
+      <div class="servings-bar">
+        <div class="servings-label">
+          Recipe scaled for
+          <strong id="label-servings">4 servings (1 chicken)</strong>
+        </div>
+        <div class="servings-control">
+          <button type="button" class="step-btn" id="decrement" aria-label="Decrease servings">&minus;</button>
+          <label for="servings" class="sr-only">Select number of servings</label>
+          <select id="servings" class="servings-select" aria-label="Number of servings">
+            <option value="4" selected>4 servings (1 chicken)</option>
+            <option value="8">8 servings (2 chickens)</option>
+            <option value="12">12 servings (3 chickens)</option>
+            <option value="16">16 servings (4 chickens)</option>
+          </select>
+          <button type="button" class="step-btn" id="increment" aria-label="Increase servings">+</button>
+        </div>
+      </div>
+
+      <section class="two-col">
+        <div>
+          <h2>Ingredients</h2>
+          <ul class="ing-list" id="ing-main"></ul>
+        </div>
+        <div>
+          <h2>Tools</h2>
+          <ul class="tool-list">
+            <li>Electric smoker</li>
+            <li>Beer can chicken stand (steadier than the can alone)</li>
+            <li>Apple wood chunks (primary smoke)</li>
+            <li>Pecan wood chunks (depth)</li>
+            <li>Instant-read or leave-in probe thermometer</li>
+            <li>Small bowl for mixing the rub</li>
+            <li>Drip pan or disposable foil pan</li>
+            <li>Tongs and heatproof gloves (the can stays hot)</li>
+            <li>Paper towels</li>
+            <li>Sharp knife and cutting board for carving</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Prep</span> &mdash; about 15 minutes</h2>
+        <ol class="steps">
+          <li>
+            <p><strong>Dry-brine the day before.</strong> Pat the chicken bone-dry inside and out. Sprinkle 1 tsp kosher salt evenly all over the skin and inside the cavity. Set it uncovered on a wire rack in the fridge <strong>overnight</strong> (or at least 4 hours).</p>
+            <p class="step-note">This is the single biggest move for crispy skin and seasoned-through meat. Skip only if you forgot &mdash; the rub still works.</p>
+          </li>
+          <li>
+            <p><strong>Mix the rub.</strong> Combine all rub ingredients in a small bowl. Reserve 1 tsp for inside the cavity. For the spicy version, mix the spicy swap-ins listed in the ingredients.</p>
+          </li>
+          <li>
+            <p><strong>Prep the beer can.</strong> Open the beer and <strong>pour out half</strong> (drink it or save for the cook). Drop the smashed garlic cloves and rosemary sprig into the can &mdash; they steam aromatic into the bird from the inside.</p>
+            <p class="step-note">A full can boils over and floods the drip pan. Half lets the beer steam properly without spilling.</p>
+          </li>
+          <li>
+            <p><strong>Oil and rub the chicken.</strong> Pull the chicken from the fridge (don&rsquo;t rinse &mdash; pat any moisture). Brush a thin layer of neutral oil or melted butter over the whole skin. Sprinkle the cavity with the reserved 1 tsp rub. Apply the rest of the rub all over the skin, pressing it in &mdash; top, bottom, under the wings, into the legs.</p>
+          </li>
+          <li>
+            <p><strong>Mount the chicken.</strong> Lower the chicken onto the half-can (or onto the stand with the can in it), legs down, until it sits upright like a tripod with the two legs and can as the base.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Smoker setup</span> &mdash; about 15 minutes</h2>
+        <ol class="steps">
+          <li>
+            <p><strong>Preheat the electric smoker to 275&deg;F.</strong> Load the chip/chunk tray with <strong>2 apple chunks + 1 pecan chunk</strong> per chicken. The 275&deg;F target is intentional &mdash; lower temps give rubbery skin on poultry. This is the lowest temp that still crisps the skin reliably.</p>
+            <p class="step-note">Wood note: apple + pecan is the magic combo for chicken. Apple alone is too subtle, hickory alone is too aggressive. Pecan bridges them.</p>
+          </li>
+          <li>
+            <p><strong>Set a drip pan</strong> on the rack below where the chicken will sit (or on the tray) to catch the rendered fat and beer drippings. Keeps the smoker clean and gives you optional pan jus.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Smoke</span> &mdash; 2.5 to 3 hours, two-stage</h2>
+        <ol class="cook-stages">
+          <li class="stage">
+            <span class="stage-num">01</span>
+            <span class="stage-name">Smoke at 275&deg;F (1.5&ndash;2 hr)</span>
+            <p>Place the chicken upright on the grates with the can/stand stable underneath. Close the lid. Smoke until the <strong>breast hits 145&deg;F</strong> at its thickest point and the thighs are around 155&deg;F.</p>
+            <p class="step-note">Don&rsquo;t open the door for the first 90 minutes &mdash; every peek costs heat and stalls the bark.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-num">02</span>
+            <span class="stage-name">Crisp the skin at 325&deg;F (30&ndash;45 min)</span>
+            <p>Bump the smoker to <strong>325&deg;F</strong> (or as high as your electric smoker goes). The skin needs this higher temp to finish to a deep mahogany. Smoke until the <strong>thigh hits 175&deg;F</strong> and the <strong>breast hits 160&deg;F</strong>.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-num">03</span>
+            <span class="stage-name">Pull and rest (10 min)</span>
+            <p>Wearing heatproof gloves, lift the chicken <strong>with the can still in place</strong> onto a tray. <strong>The can is screaming hot and full of boiling beer &mdash; keep it level.</strong> Let the bird rest 10 minutes. Carryover takes the breast to ~165&deg;F and the thigh to ~180&deg;F.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-num">04</span>
+            <span class="stage-name">Remove the can and carve</span>
+            <p>Carefully twist the can free (tongs help). Discard the beer and aromatics &mdash; they&rsquo;ve done their job. Carve: legs and thighs off first, then breasts off the bone in two halves, then slice across the grain.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Serve</span></h2>
+        <p>
+          Shingle the sliced breasts across a walnut board, legs and thighs alongside.
+          A small ramekin of warm pan jus (skim fat off the drip pan and reduce 2 minutes
+          on the stove), lemon wedges, and a scatter of fresh thyme. A simple slaw and
+          warm corn tortillas turn it into a full spread &mdash; pairs especially well
+          with <a href="toms-sweet-bbq-sauce.html">Tom&rsquo;s Sweet BBQ Sauce</a>.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Tips &amp; pitfalls</h2>
+        <div class="tips-grid">
+          <div class="tip">
+            <div class="tip-title">Don&rsquo;t smoke too low</div>
+            <p>225&deg;F gives rubbery skin on chicken. 275 &rarr; 325&deg;F is the sweet spot on an electric smoker.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Strong beer matters</div>
+            <p>Light lagers steam plain water-flavor. A bourbon stout or 8%+ malty beer pushes real flavor up through the bird.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Half a can is enough</div>
+            <p>A full can boils over and floods the drip pan. Half lets the beer steam properly without spilling.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Dry-brine overnight if you can</div>
+            <p>It&rsquo;s the single biggest move for crispy skin and seasoned-through meat.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Probe the thigh for doneness</div>
+            <p>Thigh at 175&deg;F is the safe pull point &mdash; the breast comes out perfect from carryover.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Pecan + apple is magic</div>
+            <p>Apple alone is too subtle, hickory alone is too aggressive. Pecan bridges them.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Don&rsquo;t oversmoke</div>
+            <p>Chicken takes smoke fast &mdash; 2 to 3 chunks total per bird is plenty. More turns the meat bitter and ham-like.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Skip the jus if you used an IPA</div>
+            <p>Bitterness concentrates in the drippings. Stick to malty/dark beers if you want to reduce the drippings into jus.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">Spicy: rub the heat OUT, not IN</div>
+            <p>Keep the cavity rub mild &mdash; only apply the spicy blend to the skin so heat sits on the surface, not driven into the meat.</p>
+          </div>
+          <div class="tip">
+            <div class="tip-title">The can stays hot for 20+ min</div>
+            <p>Use tongs and gloves to remove it &mdash; never bare hands. Set the chicken on a tray, not the cutting board, until the can comes off.</p>
+          </div>
+        </div>
+      </section>
+
+        <div class="actions-row">
+          <button type="button" class="action-btn" onclick="window.print()">🖨 Print this recipe</button>
+          <a href="../index.html" class="action-btn">← Back to all recipes</a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site">
+      <div class="container">
+        <div class="footer-brand">
+          <img class="footer-logo" src="../assets/images/tg-monogram.png" alt="TG monogram" />
+          <span class="footer-brand-text">Tom's Kitchen</span>
+        </div>
+        <div>Made with <span class="heart">♥</span> · est. 2026</div>
+      </div>
+    </footer>
+
+    <script>
+      // ── Recipe data ─────────────────────────────────────────────
+      // Base = 1 chicken (serves 4). Everything except wood scales linearly
+      // with chicken count: factor = chickens.
+      const ORIGINAL_CHICKENS = 1;
+
+      function prettyAmount(value) {
+        if (value === 0) return '0';
+        const whole = Math.floor(value);
+        const remainder = value - whole;
+        const fractions = [
+          [0, ''], [1/8, '⅛'], [1/6, '⅙'], [1/4, '¼'], [1/3, '⅓'],
+          [3/8, '⅜'], [1/2, '½'], [5/8, '⅝'], [2/3, '⅔'], [3/4, '¾'],
+          [5/6, '⅚'], [7/8, '⅞'], [1, ''],
+        ];
+        let best = fractions[0];
+        let bestDiff = Math.abs(remainder - fractions[0][0]);
+        for (const f of fractions) {
+          const diff = Math.abs(remainder - f[0]);
+          if (diff < bestDiff) { best = f; bestDiff = diff; }
+        }
+        const adjustWhole = best[0] === 1 ? whole + 1 : whole;
+        const frac = best[0] === 1 || best[0] === 0 ? '' : best[1];
+        if (bestDiff < 0.04) {
+          if (adjustWhole === 0) return frac || '0';
+          if (!frac) return String(adjustWhole);
+          return adjustWhole + ' ' + frac;
+        }
+        return value.toFixed(2).replace(/\.?0+$/, '');
+      }
+
+      // ── Base quantities are for 1 chicken (4 servings). factor = chickens.
+      const main = [
+        // ── The bird & wet
+        { header: 'The bird' },
+        { base: 1, render: (n) => {
+            const c = Math.round(n);
+            return { qty: String(c), item: (c === 1 ? 'whole chicken' : 'whole chickens') + ', 4–5 lb each (organic or air-chilled for the best skin)' };
+          } },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'neutral oil or melted butter (binder under the rub)' }) },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'kosher salt (for the overnight dry-brine)' }) },
+
+        // ── In the can
+        { header: 'In the beer can' },
+        { base: 0.5, render: (n) => {
+            // n is the number of cans needed (½ can per chicken). Display:
+            // 1 chicken → "½ can", 2 chickens → "1 can", 3 → "1½ cans", 4 → "2 cans".
+            const word = n <= 1 ? ' can' : ' cans';
+            return { qty: prettyAmount(n) + word, item: 'bourbon barrel stout, 12 oz can(s) — pour out half of each can; reserve the other half for the cook' };
+          } },
+        { base: 2, render: (n) => {
+            const c = Math.max(1, Math.round(n));
+            return { qty: String(c), item: (c === 1 ? 'garlic clove, smashed' : 'garlic cloves, smashed') + ' (dropped into the can)' };
+          } },
+        { base: 1, render: (n) => {
+            const s = Math.max(1, Math.round(n));
+            return { qty: String(s), item: (s === 1 ? 'sprig fresh rosemary or thyme' : 'sprigs fresh rosemary or thyme') + ' (dropped into the can)' };
+          } },
+
+        // ── Mild rub
+        { header: 'Bold-but-mild rub (the default)' },
+        { base: 2,     render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'light brown sugar' }) },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'smoked paprika' }) },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'sweet paprika' }) },
+        { base: 2,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'kosher salt' }) },
+        { base: 2,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'garlic powder' }) },
+        { base: 2,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'onion powder' }) },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'freshly ground black pepper' }) },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'dried thyme' }) },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'mustard powder' }) },
+        { base: 0.5,   render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'ground cumin' }) },
+        { base: 0.5,   render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'ground coriander' }) },
+        { base: 0.25,  render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'cayenne pepper (just a whisper)' }) },
+
+        // ── Spicy swaps (apply ON TOP of the mild rub adjustments)
+        { header: 'Spicy version — same rub, with these swaps' },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'cayenne pepper (up from ¼ tsp)' }) },
+        { base: 1,     render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'chipotle powder (NEW — smoky heat layer)' }) },
+        { base: 0.5,   render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'ground ancho or guajillo chile (NEW — raisiny depth)' }) },
+        { base: 1.5,   render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'freshly ground black pepper (up from 1 tsp)' }) },
+        { base: 1,     render: (n) => {
+            // 1 tbsp + 1 tsp = 4 tsp per chicken — scale in tsp, prefer mixed display
+            const tsp = 4 * n;
+            const tbsp = Math.floor(tsp / 3);
+            const remTsp = tsp - tbsp * 3;
+            let qty;
+            if (tbsp === 0) qty = prettyAmount(tsp) + ' tsp';
+            else if (remTsp < 0.04) qty = prettyAmount(tbsp) + ' tbsp';
+            else qty = prettyAmount(tbsp) + ' tbsp + ' + prettyAmount(remTsp) + ' tsp';
+            return { qty: qty, item: 'smoked paprika (up from 1 tbsp)' };
+          } },
+
+        // ── Wood
+        { header: 'For the smoker' },
+        { base: 2, render: (n) => {
+            const c = Math.max(1, Math.round(n));
+            return { qty: String(c), item: (c === 1 ? 'apple wood chunk' : 'apple wood chunks') + ' (primary smoke — sweet, mild)' };
+          } },
+        { base: 1, render: (n) => {
+            const c = Math.max(1, Math.round(n));
+            return { qty: String(c), item: (c === 1 ? 'pecan wood chunk' : 'pecan wood chunks') + ' (depth — nutty, not aggressive)' };
+          } },
+      ];
+
+      function renderList(targetId, items, factor) {
+        const ul = document.getElementById(targetId);
+        ul.innerHTML = '';
+        for (const ing of items) {
+          if (ing.header) {
+            const li = document.createElement('li');
+            li.className = 'ing-header';
+            li.innerHTML = '<span class="ing-header-label">' + ing.header + '</span>';
+            ul.appendChild(li);
+            continue;
+          }
+          let result;
+          if (ing.static) {
+            result = ing.render();
+          } else {
+            result = ing.render(ing.base * factor);
+          }
+          const li = document.createElement('li');
+          li.innerHTML = '<span class="qty">' + result.qty + '</span><span class="item">' + result.item + '</span>';
+          ul.appendChild(li);
+        }
+      }
+
+      function chickenLabel(chickens) {
+        const servings = chickens * 4;
+        const birdWord = chickens === 1 ? 'chicken' : 'chickens';
+        return servings + ' servings (' + chickens + ' ' + birdWord + ')';
+      }
+
+      function update(chickens) {
+        const factor = chickens / ORIGINAL_CHICKENS;
+        renderList('ing-main', main, factor);
+        document.getElementById('meta-servings').textContent = chickens * 4;
+        document.getElementById('label-servings').textContent = chickenLabel(chickens);
+      }
+
+      const select = document.getElementById('servings');
+      const decBtn = document.getElementById('decrement');
+      const incBtn = document.getElementById('increment');
+
+      // Select values are servings (4, 8, 12, 16). Convert to chickens.
+      function selectedChickens() {
+        return parseInt(select.value, 10) / 4;
+      }
+
+      function syncStepperState() {
+        const idx = select.selectedIndex;
+        decBtn.disabled = idx <= 0;
+        incBtn.disabled = idx >= select.options.length - 1;
+      }
+
+      select.addEventListener('change', () => { update(selectedChickens()); syncStepperState(); });
+      decBtn.addEventListener('click', () => { if (select.selectedIndex > 0) { select.selectedIndex -= 1; select.dispatchEvent(new Event('change')); } });
+      incBtn.addEventListener('click', () => { if (select.selectedIndex < select.options.length - 1) { select.selectedIndex += 1; select.dispatchEvent(new Event('change')); } });
+
+      update(selectedChickens());
+      syncStepperState();
+    </script>
+  </body>
+</html>
