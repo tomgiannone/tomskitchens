@@ -6,7 +6,7 @@
     <title>Tom's Seafood Boil — Tom's Kitchen</title>
     <meta
       name="description"
-      content="A big family-style seafood boil built for outdoor burners with mild, spicy, or spice-later options, plus one-pot or two-pot flexibility for crowd cooking."
+      content="A big family-style seafood boil with working toggle options for mild, spicy, spice-later, and one-pot or two-pot cooking."
     />
     <meta property="og:title" content="Tom's Seafood Boil — Tom's Kitchen" />
     <meta
@@ -46,16 +46,19 @@
         --hand: 'Caveat', cursive;
         --body: 'Work Sans', -apple-system, sans-serif;
       }
+
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
+
       html {
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         scroll-behavior: smooth;
       }
+
       body {
         font-family: var(--body);
         font-size: 16px;
@@ -67,13 +70,20 @@
           radial-gradient(circle at 80% 70%, rgba(92, 127, 86, 0.05) 0%, transparent 50%);
         min-height: 100vh;
       }
+
       a {
         color: inherit;
       }
+
       img {
         display: block;
         max-width: 100%;
       }
+
+      button {
+        font: inherit;
+      }
+
       .container {
         max-width: 880px;
         margin: 0 auto;
@@ -83,11 +93,13 @@
       header.site {
         padding: 2rem 0 1.5rem;
       }
+
       .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
       .brand {
         display: flex;
         align-items: center;
@@ -95,21 +107,25 @@
         text-decoration: none;
         color: var(--ink);
       }
+
       .brand-logo {
         height: 40px;
         width: auto;
         display: block;
       }
+
       .brand-divider {
         width: 1px;
         height: 28px;
         background: var(--rule);
       }
+
       .brand-wordmark {
         display: flex;
         flex-direction: column;
         line-height: 1;
       }
+
       .brand-wordmark .top {
         font-family: var(--display);
         font-size: 1.15rem;
@@ -117,6 +133,7 @@
         color: var(--accent);
         letter-spacing: 0.02em;
       }
+
       .brand-wordmark .bottom {
         font-family: var(--display);
         font-size: 0.8rem;
@@ -126,12 +143,14 @@
         text-transform: uppercase;
         margin-top: 3px;
       }
+
       .nav-links {
         display: flex;
         gap: 2rem;
         font-size: 0.875rem;
         color: var(--ink-muted);
       }
+
       .nav-links a {
         color: inherit;
         text-decoration: none;
@@ -139,6 +158,7 @@
         border-bottom: 1px solid transparent;
         transition: color 200ms, border-color 200ms;
       }
+
       .nav-links a:hover {
         color: var(--accent-deep);
         border-bottom-color: var(--accent);
@@ -154,6 +174,7 @@
         margin-top: 1rem;
         transition: color 200ms;
       }
+
       .back-link:hover {
         color: var(--accent-deep);
       }
@@ -165,15 +186,17 @@
         display: flex;
         justify-content: center;
       }
+
       .recipe-hero-img {
         width: 100%;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1 / 1;
         border-radius: 16px;
         overflow: hidden;
         border: 1px solid var(--rule);
         background: var(--surface);
         box-shadow: 0 8px 32px rgba(58, 47, 36, 0.1);
       }
+
       .recipe-hero-img img {
         width: 100%;
         height: 100%;
@@ -186,6 +209,7 @@
         text-align: center;
         padding: 3rem 0 1.5rem;
       }
+
       .kicker {
         font-family: var(--hand);
         font-size: 1.5rem;
@@ -194,6 +218,7 @@
         transform: rotate(-2deg);
         display: inline-block;
       }
+
       h1 {
         font-family: var(--display);
         font-size: clamp(2.25rem, 1.4rem + 3vw, 3.75rem);
@@ -204,6 +229,7 @@
         text-wrap: balance;
         font-style: italic;
       }
+
       .lede {
         font-size: 1.125rem;
         line-height: 1.55;
@@ -221,14 +247,17 @@
         overflow: hidden;
         margin-top: 2.5rem;
       }
+
       .meta-cell {
         padding: 1rem 1.25rem;
         text-align: center;
         border-right: 1px solid var(--rule-soft);
       }
+
       .meta-cell:last-child {
         border-right: none;
       }
+
       .meta-label {
         font-size: 0.6875rem;
         font-weight: 600;
@@ -237,6 +266,7 @@
         color: var(--ink-faint);
         margin-bottom: 0.25rem;
       }
+
       .meta-value {
         font-family: var(--display);
         font-style: italic;
@@ -244,6 +274,7 @@
         line-height: 1.1;
         color: var(--ink);
       }
+
       .meta-value small {
         font-family: var(--body);
         font-style: normal;
@@ -256,6 +287,7 @@
       main {
         padding-bottom: 5rem;
       }
+
       .story,
       .recipe-body {
         background: var(--surface);
@@ -264,12 +296,15 @@
         padding: clamp(1.5rem, 3vw, 2.2rem);
         box-shadow: 0 10px 28px rgba(58, 47, 36, 0.06);
       }
+
       .story {
         margin-top: 2rem;
       }
+
       .story p + p {
         margin-top: 1rem;
       }
+
       .section-title {
         font-family: var(--display);
         font-style: italic;
@@ -278,6 +313,7 @@
         margin-bottom: 0.75rem;
         color: var(--accent-deep);
       }
+
       .hand-note {
         font-family: var(--hand);
         color: var(--tomato);
@@ -288,17 +324,20 @@
       .recipe-body {
         margin-top: 2rem;
       }
+
       .grid-two {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
       }
+
       .card {
         background: var(--paper);
         border: 1px solid var(--rule-soft);
         border-radius: 14px;
         padding: 1.2rem;
       }
+
       .card h3 {
         font-family: var(--display);
         font-style: italic;
@@ -306,25 +345,49 @@
         margin-bottom: 0.6rem;
         color: var(--ink);
       }
+
       .card p {
         color: var(--ink-muted);
       }
 
+      .toggle-row {
+        margin-top: 1.75rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .toggle-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
       .toggle-btn {
-        border-radius: 999px;
-        border: 1px solid var(--rule-soft);
-        padding: 0.4rem 0.9rem;
-        font-size: 0.875rem;
+        appearance: none;
+        border: 1px solid var(--rule);
         background: #fffdf9;
         color: var(--ink-muted);
+        border-radius: 999px;
+        padding: 0.55rem 0.95rem;
         cursor: pointer;
-        transition: background 150ms, color 150ms, border-color 150ms, box-shadow 150ms;
+        transition: all 180ms ease;
       }
+
+      .toggle-btn:hover {
+        border-color: var(--accent-soft);
+        color: var(--accent-deep);
+      }
+
       .toggle-btn.is-active {
-        background: var(--accent-soft);
-        color: #fdf9f0;
+        background: var(--accent);
+        color: #fff;
         border-color: var(--accent-deep);
-        box-shadow: 0 4px 10px rgba(22, 54, 93, 0.25);
+      }
+
+      .toggle-caption {
+        margin-top: 0.75rem;
+        color: var(--ink-muted);
       }
 
       .ingredients,
@@ -333,24 +396,16 @@
       .safety {
         margin-top: 2rem;
       }
+
       ul,
       ol {
         padding-left: 1.2rem;
       }
+
       li + li {
         margin-top: 0.55rem;
       }
 
-      .ingredients h3,
-      .directions h3,
-      .notes h3,
-      .safety h3 {
-        font-family: var(--display);
-        font-style: italic;
-        font-size: 1.45rem;
-        margin-bottom: 0.75rem;
-        color: var(--ink);
-      }
       .subhead {
         font-weight: 600;
         color: var(--accent-deep);
@@ -359,19 +414,22 @@
 
       .variant-table {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1rem;
         margin-top: 1rem;
       }
+
       .variant {
         border: 1px solid var(--rule-soft);
         border-radius: 14px;
         padding: 1rem;
         background: #fffaf2;
       }
+
       .variant.spicy {
         background: #fff4ee;
       }
+
       .variant h4 {
         font-size: 0.9rem;
         text-transform: uppercase;
@@ -385,12 +443,14 @@
         gap: 1rem;
         margin-top: 1rem;
       }
+
       .step {
         border: 1px solid var(--rule-soft);
         border-radius: 14px;
         padding: 1rem 1.1rem;
         background: #fffdf9;
       }
+
       .step strong {
         color: var(--accent-deep);
         display: block;
@@ -408,23 +468,28 @@
         .nav-links {
           display: none;
         }
-        .grid-two,
-        .variant-table {
+
+        .grid-two {
           grid-template-columns: 1fr;
         }
+
         .meta-cell {
           border-right: none;
           border-bottom: 1px solid var(--rule-soft);
         }
+
         .meta-cell:last-child {
           border-bottom: none;
         }
+
         .brand-logo {
           height: 32px;
         }
+
         .brand-wordmark .top {
           font-size: 1rem;
         }
+
         .brand-wordmark .bottom {
           font-size: 0.7rem;
         }
@@ -471,31 +536,19 @@
         <div class="meta">
           <div class="meta-cell">
             <div class="meta-label">Serves</div>
-            <div class="meta-value">
-              12
-              <small>big gathering style</small>
-            </div>
+            <div class="meta-value">12<small>big gathering style</small></div>
           </div>
           <div class="meta-cell">
             <div class="meta-label">Cook Setup</div>
-            <div class="meta-value">
-              1 or 2 Pots
-              <small>outdoor burner friendly</small>
-            </div>
+            <div class="meta-value">1 or 2 Pots<small>outdoor burner friendly</small></div>
           </div>
           <div class="meta-cell">
             <div class="meta-label">Main Flavor</div>
-            <div class="meta-value">
-              Mild or Spicy
-              <small>or spice later</small>
-            </div>
+            <div class="meta-value">Mild or Spicy<small>or spice later</small></div>
           </div>
           <div class="meta-cell">
             <div class="meta-label">Method</div>
-            <div class="meta-value">
-              Seafood Boil
-              <small>drain and dump</small>
-            </div>
+            <div class="meta-value">Seafood Boil<small>drain and dump</small></div>
           </div>
         </div>
       </section>
@@ -504,12 +557,10 @@
         <div class="hand-note">how this one is built</div>
         <h2 class="section-title">One master recipe, then pick your path</h2>
         <p>
-          This version is written as one core seafood boil recipe first so it reads cleanly on the page. From there, you can cook it fully mild, fully spicy, or keep the pot mild and let people add
-          heat later with Cajun butter, hot sauce, or extra seasoning at the table.
+          This recipe reads as one shared seafood boil with two ways to cook it: a straightforward one-pot version, or a cleaner two-pot setup where mild and spicy cook side by side at the same time.
         </p>
         <p>
-          If you have two outdoor turkey-fryer burners, split the ingredients between two pots and run one mild and one spicy side by side. If you only want one pot, the exact same order of cooking
-          still works — just choose the flavor path you want and keep going.
+          The ingredient list stays unified, but the page changes what you see based on the toggles below so you can think about the boil the way you are actually making it.
         </p>
       </section>
 
@@ -518,54 +569,42 @@
           <div class="card">
             <h3>Flavor path</h3>
             <p>
-              Start from one shared base recipe, then choose how you want the broth to taste: fully mild, fully spicy, or mild with all the heat added at the table.
+              Choose mild, spicy, or mild with spice added later. The broth notes change so the page reads more like the version you are actually cooking.
             </p>
           </div>
           <div class="card">
             <h3>Pot setup</h3>
             <p>
-              Run everything in a single pot, or split the ingredients and cook one mild pot and one spicy pot side by side if you have two burners.
+              Use one large pot for a simple boil, or switch to two pots and the directions will rewrite into a side-by-side mild and spicy workflow.
             </p>
           </div>
         </div>
 
-        <!-- Toggles -->
-        <div class="toggle-row" style="margin-top: 1.75rem; display: grid; gap: 1rem;">
-          <div class="card" id="flavor-toggle-card">
+        <div class="toggle-row">
+          <div class="card">
             <h3>Choose flavor path</h3>
-            <div
-              class="toggle-buttons"
-              style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;"
-            >
+            <div class="toggle-buttons">
               <button type="button" class="toggle-btn is-active" data-flavor="mild">Mild broth</button>
               <button type="button" class="toggle-btn" data-flavor="spicy">Spicy broth</button>
-              <button type="button" class="toggle-btn" data-flavor="spice-later">Mild base + spice later</button>
+              <button type="button" class="toggle-btn" data-flavor="spice-later">Mild + spice later</button>
             </div>
-            <p
-              class="toggle-caption"
-              id="flavor-caption"
-              style="margin-top: 0.75rem; color: var(--ink-muted);"
-            >
-              Mild: lighter Old Bay and salt, mussels allowed in the pot.
+            <p class="toggle-caption" id="flavor-caption">
+              Mild: lighter Old Bay and salt, and this is the version that gets the mussels.
             </p>
           </div>
 
-          <div class="card" id="pot-toggle-card">
+          <div class="card">
             <h3>Choose pot setup</h3>
-            <div
-              class="toggle-buttons"
-              style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;"
-            >
+            <div class="toggle-buttons">
               <button type="button" class="toggle-btn is-active" data-pot="one">One pot</button>
-              <button type="button" class="toggle-btn" data-pot="two">Two pots (mild + spicy)</button>
+              <button type="button" class="toggle-btn" data-pot="two">Two pots at once</button>
             </div>
-            <p class="toggle-caption" id="pot-caption" style="margin-top: 0.75rem; color: var(--ink-muted);">
-              One pot: everything goes into a single large boil. Two pots: split everything evenly and run mild and spicy side by side.
+            <p class="toggle-caption" id="pot-caption">
+              One pot: easiest version if you only have one burner and want one clean cooking flow.
             </p>
           </div>
         </div>
 
-        <!-- Shared ingredients -->
         <div class="ingredients">
           <h2 class="section-title">Ingredients</h2>
 
@@ -575,7 +614,7 @@
             <li>4 to 5 lb large sea scallops</li>
             <li>5 lb crab legs</li>
             <li>3 lb littleneck clams, scrubbed</li>
-            <li>2 lb mussels, scrubbed (for the mild or spice-later path only)</li>
+            <li>2 lb mussels, scrubbed, for the mild or spice-later version only</li>
             <li>2 lb andouille sausage, sliced into 1-inch rounds</li>
             <li>2 lb smoked kielbasa, sliced into 1-inch rounds</li>
           </ul>
@@ -589,7 +628,7 @@
             <li>2 whole heads garlic, halved horizontally</li>
             <li>8 lemons, 6 for the broth and 2 for serving</li>
             <li>1 large bunch fresh parsley, chopped</li>
-            <li>18 to 24 eggs, optional, added raw to the boil</li>
+            <li>18 to 24 eggs, optional</li>
           </ul>
 
           <div class="subhead">Seasonings and finishing</div>
@@ -604,7 +643,6 @@
           </ul>
         </div>
 
-        <!-- Directions that respond to toggles -->
         <div class="directions">
           <h2 class="section-title">Directions</h2>
 
@@ -612,112 +650,93 @@
             <div class="variant" id="variant-mild">
               <h4>Mild broth</h4>
               <p>
-                Build a lemony, aromatic base with onions, garlic, bay leaves, kosher salt, and a lighter amount of Old Bay.
-                This is the only version that gets mussels in the pot.
+                Use lemon, onion, garlic, bay leaves, kosher salt, and a lighter amount of Old Bay. This version stays family-friendly and is the only path that gets mussels.
               </p>
             </div>
+
             <div class="variant spicy" id="variant-spicy" style="display: none;">
               <h4>Spicy broth</h4>
               <p>
-                Start with the same base, then push it with extra Old Bay, Cajun seasoning, cayenne, and fresh chiles.
-                Skip mussels here and let the broth carry the heat.
+                Use the same base, then push it harder with extra Old Bay, Cajun seasoning, cayenne, and fresh chiles. This pot skips the mussels and carries the heat directly in the broth.
               </p>
             </div>
+
             <div class="variant" id="variant-spice-later" style="display: none;">
               <h4>Mild + spice later</h4>
               <p>
-                Cook the pot as the mild version, then serve Cajun butter, hot sauce, and extra Cajun seasoning at the table so everyone can set their own heat level.
+                Cook the broth as a mild version, then put the heat on the table with Cajun butter, hot sauce, and extra seasoning so each person can build their own plate.
               </p>
             </div>
           </div>
 
-          <!-- One-pot steps -->
           <div class="step-grid" id="steps-one-pot">
             <div class="step">
               <strong>1. Build the broth.</strong>
-              In a large outdoor boil pot, add about 3 gallons of water, 3 halved lemons, 2 quartered onions, 1 halved garlic head, and 4 bay leaves.
-              For mild or spice-later: about 2 tablespoons kosher salt and 1/4 cup Old Bay.
-              For spicy: about 2 tablespoons kosher salt, 1/2 cup Old Bay, 1/4 cup Cajun seasoning, 1 to 2 teaspoons cayenne, and 2 to 3 halved fresh chiles.
-              Simmer 10 to 15 minutes, then taste and adjust.
+              In a large outdoor boil pot, add about 3 gallons of water, 3 halved lemons, 2 quartered onions, 1 halved garlic head, and 4 bay leaves. For mild or spice-later, season with about 2 tablespoons kosher salt and 1/4 cup Old Bay. For spicy, use about 2 tablespoons kosher salt, 1/2 cup Old Bay, 1/4 cup Cajun seasoning, 1 to 2 teaspoons cayenne, and 2 to 3 halved fresh chiles. Bring to a strong simmer for 10 to 15 minutes, then taste and adjust.
             </div>
             <div class="step">
-              <strong>2. Potatoes first.</strong>
-              Add the potatoes and simmer 10 to 12 minutes, until they just start to soften but are not fully done.
+              <strong>2. Add the potatoes first.</strong>
+              Add the potatoes and simmer 10 to 12 minutes, until they are just starting to soften but are not fully done.
             </div>
             <div class="step">
-              <strong>3. Corn and sausage.</strong>
+              <strong>3. Add corn and sausage.</strong>
               Add the corn, andouille, and kielbasa. Simmer another 8 to 10 minutes.
             </div>
             <div class="step">
-              <strong>4. Eggs and green beans.</strong>
-              If using eggs, lower them in raw and simmer 10 to 12 minutes so they hard-boil in the seasoned broth.
-              Add green beans in the last 5 to 6 minutes so they stay bright.
+              <strong>4. Add eggs and green beans.</strong>
+              If using eggs, lower them in raw and simmer 10 to 12 minutes so they hard-boil in the seasoned broth. Add green beans in the last 5 to 6 minutes so they keep their color.
             </div>
             <div class="step">
-              <strong>5. Shellfish and crab.</strong>
-              Add the clams to any version.
-              Add mussels only if you are cooking the mild or spice-later path.
-              Simmer until shells open, about 5 to 7 minutes, then add the crab legs and cook another 3 to 5 minutes to heat through.
-              Discard any clams or mussels that do not open.
+              <strong>5. Add shellfish and crab.</strong>
+              Add the clams to any version. Add mussels only if you are cooking the mild or spice-later path. Simmer until the shells open, about 5 to 7 minutes, then add the crab legs and cook another 3 to 5 minutes to heat through. Discard any clams or mussels that do not open.
             </div>
             <div class="step">
-              <strong>6. Shrimp and scallops last.</strong>
-              Add the shrimp and scallops.
-              Simmer gently for 2 to 3 minutes, turn off the heat, cover, and let the seafood finish in the hot broth for 8 to 10 minutes.
+              <strong>6. Finish with shrimp and scallops.</strong>
+              Add the shrimp and scallops last. Simmer gently for 2 to 3 minutes, then turn off the heat, cover the pot, and let the seafood finish in the hot broth for 8 to 10 minutes.
             </div>
             <div class="step">
-              <strong>7. Drain, dump, and finish.</strong>
-              Lift the basket if your pot has one, or drain using a large colander.
-              Pour the boil onto a cloth-and-paper-lined table.
-              Finish with chopped parsley, lemon wedges, and warm butter sauces.
+              <strong>7. Drain and dump for serving.</strong>
+              Lift the basket if your pot has one, or drain using a large colander. Pour the boil out onto a table lined with a cloth and butcher paper. Finish with chopped parsley, lemon wedges, and warm butter sauces if using.
             </div>
           </div>
 
-          <!-- Two-pot steps -->
           <div class="step-grid" id="steps-two-pot" style="display: none;">
             <div class="step">
-              <strong>1. Split the ingredients.</strong>
-              Divide the potatoes, corn, sausage, shrimp, scallops, crab, clams, eggs, and green beans evenly between two pots.
-              Put all mussels into the pot that will stay mild or be used for the spice-later path.
+              <strong>1. Split the full recipe into two matching lanes.</strong>
+              Divide the potatoes, corn, sausage, shrimp, scallops, crab, clams, eggs, and green beans evenly between two pots. Put all mussels into the pot that will stay mild or be used for the spice-later path.
             </div>
             <div class="step">
-              <strong>2. Build one mild and one spicy broth.</strong>
-              In each pot, add about 2 gallons of water, 2 halved lemons, 2 quartered onions, 1 halved garlic head, and 4 bay leaves.
-              Season one pot as mild (lighter Old Bay, no cayenne or fresh chiles) and the other as spicy (heavier Old Bay, Cajun seasoning, cayenne, and fresh chiles).
-              Simmer both for 10 to 15 minutes.
+              <strong>2. Build both broths at the same time.</strong>
+              In each pot, add about 2 gallons of water, 2 halved lemons, 2 quartered onions, 1 halved garlic head, and 4 bay leaves. Season one pot as mild and the other as spicy. Keep both pots on the same timer so the cooking stays easy to track.
             </div>
             <div class="step">
-              <strong>3. Potatoes, then corn and sausage.</strong>
-              In both pots, add potatoes and simmer 10 to 12 minutes.
-              Add corn and sausage, simmer another 8 to 10 minutes.
+              <strong>3. Run both pots in the same order.</strong>
+              Add potatoes to both pots and simmer 10 to 12 minutes. Add corn and sausage to both pots and simmer another 8 to 10 minutes.
             </div>
             <div class="step">
-              <strong>4. Eggs, green beans, shellfish, and crab.</strong>
-              Add eggs and green beans as above.
-              Add clams to both pots; add mussels only to the mild pot.
-              When shells open, add crab legs to each pot and cook 3 to 5 minutes.
+              <strong>4. Add the middle ingredients together.</strong>
+              Add eggs and green beans to both pots. Add clams to both pots, but add mussels only to the mild pot. Once the shells open, add crab legs to both pots and cook 3 to 5 minutes.
             </div>
             <div class="step">
-              <strong>5. Finish with shrimp and scallops.</strong>
-              Add shrimp and scallops to each pot, simmer 2 to 3 minutes, then turn off the heat and let them sit covered 8 to 10 minutes.
+              <strong>5. Finish both pots the same way.</strong>
+              Add shrimp and scallops to each pot, simmer 2 to 3 minutes, then turn off the heat and let both pots sit covered 8 to 10 minutes.
             </div>
             <div class="step">
               <strong>6. Drain and serve side by side.</strong>
-              Drain each pot separately and pour them down the middle of the table in two clear lanes — mild on one side, spicy on the other.
+              Drain each pot separately and pour them onto the table in two clear lanes — one mild and one spicy — so people can choose the version they want without guesswork.
             </div>
           </div>
         </div>
 
         <div class="notes">
           <h2 class="section-title">Notes and options</h2>
+          <h3>What changes when you use two pots</h3>
+          <p>
+            The ingredient list stays the same overall, but the work gets easier because both pots move through the same order together. The only real difference is that the mild pot gets the mussels and the spicy pot gets the extra heat.
+          </p>
           <h3>Mild with spice added later</h3>
           <p>
-            To run one pot that works for everyone, keep the broth in the mild range and let people spike their plates with Cajun butter, hot sauce, or extra Cajun seasoning at the table.
-          </p>
-          <h3>Scaling up or down</h3>
-          <p>
-            The quantities here land around 12 generous servings.
-            For a smaller group, cut everything in half and keep the same cooking order and timing.
+            If you want one setup that keeps everyone happy, cook the broth in the mild range and let people add Cajun butter, hot sauce, or extra seasoning at the table.
           </p>
         </div>
 
@@ -732,71 +751,78 @@
           </ul>
         </div>
       </section>
-
-      <footer>
-        <div class="container">Tom's Kitchen — recipes worth keeping.</div>
-      </footer>
-
-      <script>
-        (function () {
-          const flavorButtons = document.querySelectorAll('.toggle-btn[data-flavor]');
-          const potButtons = document.querySelectorAll('.toggle-btn[data-pot]');
-          const variantMild = document.getElementById('variant-mild');
-          const variantSpicy = document.getElementById('variant-spicy');
-          const variantSpiceLater = document.getElementById('variant-spice-later');
-          const stepsOnePot = document.getElementById('steps-one-pot');
-          const stepsTwoPot = document.getElementById('steps-two-pot');
-          const flavorCaption = document.getElementById('flavor-caption');
-          const potCaption = document.getElementById('pot-caption');
-
-          function setFlavor(flavor) {
-            flavorButtons.forEach((btn) => {
-              btn.classList.toggle('is-active', btn.dataset.flavor === flavor);
-            });
-            variantMild.style.display = flavor === 'mild' ? '' : 'none';
-            variantSpicy.style.display = flavor === 'spicy' ? '' : 'none';
-            variantSpiceLater.style.display = flavor === 'spice-later' ? '' : 'none';
-
-            if (flavor === 'mild') {
-              flavorCaption.textContent =
-                'Mild: lighter Old Bay and salt, mussels allowed in the pot.';
-            } else if (flavor === 'spicy') {
-              flavorCaption.textContent =
-                'Spicy: heavier Old Bay and Cajun, plus cayenne and fresh chiles; no mussels in this pot.';
-            } else {
-              flavorCaption.textContent =
-                'Mild base + spice later: cook it mild, then let everyone add their own heat at the table.';
-            }
-          }
-
-          function setPotSetup(pot) {
-            potButtons.forEach((btn) => {
-              btn.classList.toggle('is-active', btn.dataset.pot === pot);
-            });
-            const isTwo = pot === 'two';
-            stepsOnePot.style.display = isTwo ? 'none' : '';
-            stepsTwoPot.style.display = isTwo ? '' : 'none';
-
-            if (isTwo) {
-              potCaption.textContent =
-                'Two pots: split everything and run one mild pot and one spicy pot side by side.';
-            } else {
-              potCaption.textContent =
-                'One pot: everything runs through a single boil, easier if you only have one burner.';
-            }
-          }
-
-          flavorButtons.forEach((btn) => {
-            btn.addEventListener('click', () => setFlavor(btn.dataset.flavor));
-          });
-          potButtons.forEach((btn) => {
-            btn.addEventListener('click', () => setPotSetup(btn.dataset.pot));
-          });
-
-          setFlavor('mild');
-          setPotSetup('one');
-        })();
-      </script>
     </main>
+
+    <footer>
+      <div class="container">Tom's Kitchen — recipes worth keeping.</div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const flavorButtons = document.querySelectorAll('[data-flavor]');
+        const potButtons = document.querySelectorAll('[data-pot]');
+        const variantMild = document.getElementById('variant-mild');
+        const variantSpicy = document.getElementById('variant-spicy');
+        const variantSpiceLater = document.getElementById('variant-spice-later');
+        const stepsOnePot = document.getElementById('steps-one-pot');
+        const stepsTwoPot = document.getElementById('steps-two-pot');
+        const flavorCaption = document.getElementById('flavor-caption');
+        const potCaption = document.getElementById('pot-caption');
+
+        function setFlavor(flavor) {
+          flavorButtons.forEach(function (btn) {
+            btn.classList.toggle('is-active', btn.getAttribute('data-flavor') === flavor);
+          });
+
+          variantMild.style.display = flavor === 'mild' ? '' : 'none';
+          variantSpicy.style.display = flavor === 'spicy' ? '' : 'none';
+          variantSpiceLater.style.display = flavor === 'spice-later' ? '' : 'none';
+
+          if (flavor === 'mild') {
+            flavorCaption.textContent =
+              'Mild: lighter Old Bay and salt, and this is the version that gets the mussels.';
+          } else if (flavor === 'spicy') {
+            flavorCaption.textContent =
+              'Spicy: extra Old Bay, Cajun seasoning, cayenne, and fresh chiles; no mussels in this pot.';
+          } else {
+            flavorCaption.textContent =
+              'Mild + spice later: keep the broth milder, then put the heat on the table so everyone can season their own portion.';
+          }
+        }
+
+        function setPot(pot) {
+          potButtons.forEach(function (btn) {
+            btn.classList.toggle('is-active', btn.getAttribute('data-pot') === pot);
+          });
+
+          const isTwo = pot === 'two';
+          stepsOnePot.style.display = isTwo ? 'none' : '';
+          stepsTwoPot.style.display = isTwo ? '' : 'none';
+
+          if (isTwo) {
+            potCaption.textContent =
+              'Two pots at once: the recipe rewrites into a side-by-side mild and spicy workflow so both pots move together.';
+          } else {
+            potCaption.textContent =
+              'One pot: easiest version if you only have one burner and want one clean cooking flow.';
+          }
+        }
+
+        flavorButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            setFlavor(btn.getAttribute('data-flavor'));
+          });
+        });
+
+        potButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            setPot(btn.getAttribute('data-pot'));
+          });
+        });
+
+        setFlavor('mild');
+        setPot('one');
+      });
+    </script>
   </body>
 </html>
