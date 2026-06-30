@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom's Seafood Boil — Tom's Kitchen</title>
+    <meta name="description" content="A big family-style seafood boil built for outdoor burners with mild, spicy, or spice-later options, plus one-pot or two-pot flexibility for crowd cooking." />
+    <meta property="og:title" content="Tom's Seafood Boil — Tom's Kitchen" />
+    <meta property="og:description" content="A flexible seafood boil for about 12 with shrimp, scallops, crab, clams, sausage, corn, potatoes, and optional eggs." />
+    <meta property="og:image" content="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/55569bf0-b693-4df6-8923-bcf472e69e71.png" />
+    <meta property="og:type" content="article" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Libre+Caslon+Text:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%8D%B4%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #f5efe2;
+        --paper: #fbf6ea;
+        --surface: #ffffff;
+        --ink: #3a2f24;
+        --ink-muted: #7a6a58;
+        --ink-faint: #b8a78f;
+        --rule: #d9cdb6;
+        --rule-soft: #e8ddc5;
+        --accent: #16365D;
+        --accent-deep: #0E2542;
+        --accent-soft: #2c4f7a;
+        --tomato: #B85C3A;
+        --display: 'Libre Caslon Text', Georgia, serif;
+        --hand: 'Caveat', cursive;
+        --body: 'Work Sans', -apple-system, sans-serif;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+      body {
+        font-family: var(--body);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--ink);
+        background: var(--bg);
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(196, 74, 53, 0.04) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(92, 127, 86, 0.05) 0%, transparent 50%);
+        min-height: 100vh;
+      }
+      a { color: inherit; }
+      img { display: block; max-width: 100%; }
+      .container { max-width: 880px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+
+      header.site { padding: 2rem 0 1.5rem; }
+      .nav { display: flex; justify-content: space-between; align-items: center; }
+      .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); }
+      .brand-logo { height: 40px; width: auto; display: block; }
+      .brand-divider { width: 1px; height: 28px; background: var(--rule); }
+      .brand-wordmark { display: flex; flex-direction: column; line-height: 1; }
+      .brand-wordmark .top { font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--accent); letter-spacing: 0.02em; }
+      .brand-wordmark .bottom { font-family: var(--display); font-size: 0.8rem; font-style: italic; color: var(--ink-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 3px; }
+      .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; color: var(--ink-muted); }
+      .nav-links a { color: inherit; text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 200ms, border-color 200ms; }
+      .nav-links a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: color 200ms;
+      }
+      .back-link:hover { color: var(--accent-deep); }
+
+      .recipe-hero {
+        max-width: 720px;
+        margin: 1.5rem auto 0;
+        padding: 0 clamp(1.5rem, 4vw, 3rem);
+        display: flex;
+        justify-content: center;
+      }
+      .recipe-hero-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--rule);
+        background: var(--surface);
+        box-shadow: 0 8px 32px rgba(58, 47, 36, 0.10);
+      }
+      .recipe-hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      .title-block {
+        text-align: center;
+        padding: 3rem 0 1.5rem;
+      }
+      .kicker {
+        font-family: var(--hand);
+        font-size: 1.5rem;
+        color: var(--tomato);
+        margin-bottom: 0.5rem;
+        transform: rotate(-2deg);
+        display: inline-block;
+      }
+      h1 {
+        font-family: var(--display);
+        font-size: clamp(2.25rem, 1.4rem + 3vw, 3.75rem);
+        line-height: 1.05;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        margin-bottom: 1rem;
+        text-wrap: balance;
+        font-style: italic;
+      }
+      .lede {
+        font-size: 1.125rem;
+        line-height: 1.55;
+        color: var(--ink-muted);
+        max-width: 56ch;
+        margin: 0 auto;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        overflow: hidden;
+        margin-top: 2.5rem;
+      }
+      .meta-cell {
+        padding: 1rem 1.25rem;
+        text-align: center;
+        border-right: 1px solid var(--rule-soft);
+      }
+      .meta-cell:last-child { border-right: none; }
+      .meta-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.25rem;
+      }
+      .meta-value {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.375rem;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+      .meta-value small {
+        font-family: var(--body);
+        font-style: normal;
+        font-size: 0.8125rem;
+        color: var(--ink-muted);
+        display: block;
+        margin-top: 0.25rem;
+      }
+
+      main { padding-bottom: 5rem; }
+      .story,
+      .recipe-body {
+        background: var(--surface);
+        border: 1px solid var(--rule);
+        border-radius: 18px;
+        padding: clamp(1.5rem, 3vw, 2.2rem);
+        box-shadow: 0 10px 28px rgba(58, 47, 36, 0.06);
+      }
+      .story { margin-top: 2rem; }
+      .story p + p { margin-top: 1rem; }
+      .section-title {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+        color: var(--accent-deep);
+      }
+      .hand-note {
+        font-family: var(--hand);
+        color: var(--tomato);
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .recipe-body { margin-top: 2rem; }
+      .grid-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--rule-soft);
+        border-radius: 14px;
+        padding: 1.2rem;
+      }
+      .card h3 {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+        color: var(--ink);
+      }
+      .card p { color: var(--ink-muted); }
+
+      .ingredients,
+      .directions,
+      .notes,
+      .safety {
+        margin-top: 2rem;
+      }
+      ul,
+      ol {
+        padding-left: 1.2rem;
+      }
+      li + li { margin-top: 0.55rem; }
+
+      .ingredients h3,
+      .directions h3,
+      .notes h3,
+      .safety h3 {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.45rem;
+        margin-bottom: 0.75rem;
+        color: var(--ink);
+      }
+      .subhead {
+        font-weight: 600;
+        color: var(--accent-deep);
+        margin: 1rem 0 0.45rem;
+      }
+
+      .variant-table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .variant {
+        border: 1px solid var(--rule-soft);
+        border-radius: 14px;
+        padding: 1rem;
+        background: #fffaf2;
+      }
+      .variant.spicy { background: #fff4ee; }
+      .variant h4 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .step-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .step {
+        border: 1px solid var(--rule-soft);
+        border-radius: 14px;
+        padding: 1rem 1.1rem;
+        background: #fffdf9;
+      }
+      .step strong {
+        color: var(--accent-deep);
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      footer {
+        padding: 3rem 0 4rem;
+        text-align: center;
+        color: var(--ink-muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        .nav-links { display: none; }
+        .grid-two,
+        .variant-table {
+          grid-template-columns: 1fr;
+        }
+        .meta-cell {
+          border-right: none;
+          border-bottom: 1px solid var(--rule-soft);
+        }
+        .meta-cell:last-child { border-bottom: none; }
+        .brand-logo { height: 32px; }
+        .brand-wordmark .top { font-size: 1rem; }
+        .brand-wordmark .bottom { font-size: 0.7rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="container nav">
+        <a class="brand" href="../index.html" aria-label="Tom's Kitchen home">
+          <img class="brand-logo" src="../assets/images/tk-logo.png" alt="Tom's Kitchen logo" />
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-wordmark"><span class="top">Tom's Kitchen</span><span class="bottom">Recipes worth keeping</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#recipes">Recipes</a>
+          <a href="../index.html#about">About</a>
+        </nav>
+      </div>
+      <div class="container">
+        <a class="back-link" href="../index.html#recipes">← Back to recipes</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="recipe-hero">
+        <div class="recipe-hero-img">
+          <img
+            src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/55569bf0-b693-4df6-8923-bcf472e69e71.png"
+            alt="Seafood boil on white linen with walnut wood edges, shrimp, crab legs, scallops, clams, mussels, corn, potatoes, sausage, lemon, parsley, and optional eggs"
+          />
+        </div>
+      </section>
+
+      <section class="container title-block">
+        <div class="kicker">big pot, big crowd, no panic</div>
+        <h1>Tom's Seafood Boil</h1>
+        <p class="lede">
+          A flexible seafood boil built for outdoor propane burners and family-style table service, with room to cook it mild, spicy, or mild with the heat added later.
+        </p>
+        <div class="meta">
+          <div class="meta-cell">
+            <div class="meta-label">Serves</div>
+            <div class="meta-value">
+              12
+              <small>big gathering style</small>
+            </div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label">Cook Setup</div>
+            <div class="meta-value">
+              1 or 2 Pots
+              <small>outdoor burner friendly</small>
+            </div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label">Main Flavor</div>
+            <div class="meta-value">
+              Mild or Spicy
+              <small>or spice later</small>
+            </div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label">Method</div>
+            <div class="meta-value">
+              Seafood Boil
+              <small>drain and dump</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container story">
+        <div class="hand-note">how this one is built</div>
+        <h2 class="section-title">One master recipe, then pick your path</h2>
+        <p>
+          This version is written as one core seafood boil recipe first so it reads cleanly on the page. From there, you can cook it fully mild, fully spicy, or keep the pot mild and let people add
+          heat later with Cajun butter, hot sauce, or extra seasoning at the table.
+        </p>
+        <p>
+          If you have two outdoor turkey-fryer burners, split the ingredients between two pots and run one mild and one spicy side by side. If you only want one pot, the exact same order of cooking
+          still works — just choose the flavor path you want and keep going.
+        </p>
+      </section>
+
+      <section class="container recipe-body">
+        <div class="grid-two">
+          <div class="card">
+            <h3>Flavor path</h3>
+            <p>Choose mild, spicy, or mild with spice added later. The main recipe stays the same; only the broth seasonings and finishing options change.</p>
+          </div>
+          <div class="card">
+            <h3>Pot setup</h3>
+            <p>Use one large pot for a single flavor, or two pots if you want a mild side and a spicy side at the same time. Mussels belong only in the mild version.</p>
+          </div>
+        </div>
+
+        <div class="ingredients">
+          <h2 class="section-title">Ingredients</h2>
+
+          <div class="subhead">Seafood and meat</div>
+          <ul>
+            <li>6 lb large shell-on shrimp, deveined</li>
+            <li>4 to 5 lb large sea scallops</li>
+            <li>5 lb crab legs</li>
+            <li>3 lb littleneck clams, scrubbed</li>
+            <li>2 lb mussels, scrubbed, for the mild version only</li>
+            <li>2 lb andouille sausage, sliced into 1-inch rounds</li>
+            <li>2 lb smoked kielbasa, sliced into 1-inch rounds</li>
+          </ul>
+
+          <div class="subhead">Vegetables and aromatics</div>
+          <ul>
+            <li>5 lb small Yukon Gold or red potatoes, halved</li>
+            <li>12 ears corn, cut into 2 to 3-inch chunks</li>
+            <li>2 lb green beans, trimmed, optional</li>
+            <li>4 large yellow onions, quartered</li>
+            <li>2 whole heads garlic, halved horizontally</li>
+            <li>8 lemons, 6 for the broth and 2 for serving</li>
+            <li>1 large bunch fresh parsley, chopped</li>
+            <li>18 to 24 eggs, optional, added raw to the boil</li>
+          </ul>
+
+          <div class="subhead">Seasonings and finishing</div>
+          <ul>
+            <li>Old Bay seasoning</li>
+            <li>Cajun seasoning</li>
+            <li>Cayenne pepper</li>
+            <li>2 to 3 fresh chiles, halved, for the spicy version</li>
+            <li>8 bay leaves</li>
+            <li>Kosher salt</li>
+            <li>2 to 3 cups unsalted butter for finishing or table sauces</li>
+          </ul>
+        </div>
+
+        <div class="directions">
+          <h2 class="section-title">Directions</h2>
+
+          <div class="variant-table">
+            <div class="variant">
+              <h4>Mild broth</h4>
+              <p>Use lemon, onion, garlic, bay leaves, kosher salt, and a lighter amount of Old Bay. This is the only version that gets the mussels.</p>
+            </div>
+            <div class="variant spicy">
+              <h4>Spicy broth</h4>
+              <p>Use the same base plus more Old Bay, Cajun seasoning, cayenne, and fresh chiles. Skip the mussels here and let the broth carry the heat.</p>
+            </div>
+          </div>
+
+          <div class="step-grid">
+            <div class="step">
+              <strong>1. Build the broth.</strong>
+              In a large outdoor boil pot, add about 3 gallons of water, 3 halved lemons, 2 quartered onions, 1 halved garlic head, and 4 bay leaves. For mild, season with about 2 tablespoons
+              kosher salt and 1/4 cup Old Bay. For spicy, use about 2 tablespoons kosher salt, 1/2 cup Old Bay, 1/4 cup Cajun seasoning, 1 to 2 teaspoons cayenne, and 2 to 3 halved fresh chiles.
+              Bring to a strong simmer for 10 to 15 minutes, then taste and adjust.
+            </div>
+            <div class="step">
+              <strong>2. Add the potatoes first.</strong>
+              Add the potatoes and simmer 10 to 12 minutes, until they are just starting to soften but are not fully done.
+            </div>
+            <div class="step">
+              <strong>3. Add corn and sausage.</strong>
+              Add the corn, andouille, and kielbasa. Simmer another 8 to 10 minutes.
+            </div>
+            <div class="step">
+              <strong>4. Add the optional eggs and green beans.</strong>
+              If using eggs, lower them in raw and simmer 10 to 12 minutes so they hard-boil in the seasoned broth. Add green beans in the last 5 to 6 minutes so they keep their color.
+            </div>
+            <div class="step">
+              <strong>5. Add shellfish and crab.</strong>
+              Add the clams to any version. Add mussels only if you are cooking the mild version. Simmer until the shells open, about 5 to 7 minutes, then add the crab legs and cook another 3 to 5
+              minutes to heat through. Discard any clams or mussels that do not open.
+            </div>
+            <div class="step">
+              <strong>6. Finish with shrimp and scallops.</strong>
+              Add the shrimp and scallops last. Simmer gently for 2 to 3 minutes, then turn off the heat, cover the pot, and let the seafood finish in the hot broth for 8 to 10 minutes.
+            </div>
+            <div class="step">
+              <strong>7. Drain and dump for serving.</strong>
+              Lift the basket if your pot has one, or drain using a large colander. Pour the boil out onto a table lined with a cloth and butcher paper. Finish with chopped parsley, lemon wedges, and
+              warm butter sauces if using.
+            </div>
+          </div>
+        </div>
+
+        <div class="notes">
+          <h2 class="section-title">Notes and options</h2>
+          <h3>Mild with spice added later</h3>
+          <p>
+            If you want one pot that works for everyone, cook the full recipe as the mild version and serve extra heat on the table. Cajun butter, hot sauce, and a bowl of extra Cajun seasoning let
+            each person push the spice where they want it.
+          </p>
+          <h3>Two-pot variation</h3>
+          <p>
+            To cook mild and spicy side by side, split the potatoes, corn, sausage, shrimp, scallops, crab, clams, eggs, and green beans evenly between two pots. Put all mussels into the mild pot
+            only, then follow the same cooking order in both pots.
+          </p>
+          <h3>One-pot variation</h3>
+          <p>
+            To cook this as a single pot, keep the ingredient list the same and simply choose one broth path. Mild is the safest crowd option; spicy gives you the strongest built-in flavor.
+          </p>
+        </div>
+
+        <div class="safety">
+          <h2 class="section-title">Safety</h2>
+          <ul>
+            <li>Cook outdoors on a flat, stable surface with the burner away from anything flammable.</li>
+            <li>Do not overfill the pot; leave room for boiling, stirring, and draining.</li>
+            <li>Keep kids and pets away from the burners and hot liquid.</li>
+            <li>Use heat-safe gloves when lifting baskets, lids, or draining heavy pots.</li>
+            <li>Turn off the propane before moving equipment and keep a fire extinguisher nearby.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">Tom's Kitchen — recipes worth keeping.</div>
+    </footer>
+  </body>
+</html>
