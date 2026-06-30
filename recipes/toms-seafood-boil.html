@@ -876,18 +876,6 @@
 
       <div class="toggle-wrap">
         <div class="toggle-card">
-          <div class="toggle-title">Flavor path</div>
-          <div class="toggle-buttons">
-            <button type="button" class="toggle-btn is-active" data-flavor="mild">Mild broth</button>
-            <button type="button" class="toggle-btn" data-flavor="spicy">Spicy broth</button>
-            <button type="button" class="toggle-btn" data-flavor="spice-later">Mild + spice later</button>
-          </div>
-          <p class="toggle-caption" id="flavor-caption">
-            Mild keeps the broth crowd-friendly and is the only version that includes mussels.
-          </p>
-        </div>
-
-        <div class="toggle-card">
           <div class="toggle-title">Pot setup</div>
           <div class="toggle-buttons">
             <button type="button" class="toggle-btn is-active" data-pot="one">One pot</button>
@@ -897,15 +885,23 @@
             One pot keeps the whole recipe in one clean flow if you only have one burner.
           </p>
         </div>
+
+        <div class="toggle-card">
+          <div class="toggle-title">Flavor profile</div>
+          <div class="toggle-buttons" id="flavor-buttons"></div>
+          <p class="toggle-caption" id="flavor-caption">
+            Mild keeps the broth crowd-friendly and is the only version that includes mussels.
+          </p>
+        </div>
       </div>
 
       <section class="story">
         <h2>How this recipe <span class="accent">works</span></h2>
         <p>
-          This recipe is written to feel easy to follow no matter which options you choose. The serving control changes the ingredient amounts, while the toggles change the broth notes and the way the cooking steps read.
+          This recipe is designed so the page reads correctly based on how you are actually cooking it. The serving control changes the ingredient amounts, the pot toggle changes the cooking structure, and the flavor profile changes the broth notes and finishing details. [file:161]
         </p>
         <p>
-          The cooking order stays consistent: potatoes first, then sausage and corn, then optional eggs and green beans, then shellfish and crab, then shrimp and scallops last. That way the page stays intuitive whether you are cooking mild, spicy, one pot, or two pots at once.
+          The cooking order stays consistent in every version: potatoes first, then sausage and corn, then optional eggs and green beans, then shellfish and crab, then shrimp and scallops last. That keeps the recipe easy to follow even when you are running two burners at once. [file:161]
         </p>
       </section>
 
@@ -942,24 +938,10 @@
       <section class="section">
         <h2><span class="accent">Flavor</span> notes</h2>
 
-        <div class="variant-card" id="variant-mild">
-          <div class="variant-name">Mild broth</div>
-          <p>
+        <div class="variant-card" id="variant-card">
+          <div class="variant-name" id="variant-name">Mild broth</div>
+          <p id="variant-description">
             Use lemon, onion, garlic, bay leaves, kosher salt, and a lighter hand with Old Bay. This version stays balanced and is the one that gets the mussels.
-          </p>
-        </div>
-
-        <div class="variant-card" id="variant-spicy" style="display: none;">
-          <div class="variant-name">Spicy broth</div>
-          <p>
-            Start with the same base, then push it harder with more Old Bay, Cajun seasoning, cayenne, and fresh chiles. Skip the mussels here and let the broth carry the heat.
-          </p>
-        </div>
-
-        <div class="variant-card" id="variant-spice-later" style="display: none;">
-          <div class="variant-name">Mild broth with spice added later</div>
-          <p>
-            Build the pot as a mild boil, then let people add Cajun butter, hot sauce, or extra seasoning at the table so everyone can control the heat on their own plate.
           </p>
         </div>
       </section>
@@ -1067,7 +1049,7 @@
           </div>
           <ul>
             <li>Before lighting both burners, divide the potatoes, corn, sausage, shrimp, scallops, crab, clams, eggs, and green beans as evenly as you can between the two pots.</li>
-            <li>Keep all mussels in the mild pot only.</li>
+            <li id="two-pot-mussel-plan">Keep all mussels in the mild pot only.</li>
             <li>Set the ingredients out in cooking order so both pots can move together without confusion: potatoes first, then sausage and corn, then optional eggs and green beans, then clams and crab, then shrimp and scallops last.</li>
           </ul>
         </div>
@@ -1142,7 +1124,7 @@
           <ul>
             <li>Check a potato from each pot before draining. It should be tender all the way through.</li>
             <li>Drain each pot separately.</li>
-            <li>Dump the mild and spicy boils in two clear lanes on the table so people can choose without guessing.</li>
+            <li id="serve-line-twopot">Dump the mild and spicy boils in two clear lanes on the table so people can choose without guessing.</li>
             <li id="finish-line-twopot">Finish both with chopped parsley, lemon wedges, and butter sauces, keeping hotter sauces near the spicy side.</li>
           </ul>
         </div>
@@ -1236,7 +1218,7 @@
         { base: 4.5, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'large sea scallops' }) },
         { base: 5, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'crab legs' }) },
         { base: 3, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'littleneck clams, scrubbed' }) },
-        { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'mussels, scrubbed (mild or spice-later only)' }) },
+        { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'mussels, scrubbed (mild-side only)' }) },
         { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'andouille sausage, sliced' }) },
         { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'smoked kielbasa, sliced' }) }
       ];
@@ -1312,18 +1294,105 @@
         }
       });
 
-      const flavorButtons = document.querySelectorAll('[data-flavor]');
+      const flavorConfigs = {
+        one: [
+          {
+            key: 'mild',
+            label: 'Mild broth',
+            caption: 'Mild keeps the broth crowd-friendly and is the only version that includes mussels.',
+            variantName: 'Mild broth',
+            variantDescription: 'Use lemon, onion, garlic, bay leaves, kosher salt, and a lighter hand with Old Bay. This version stays balanced and is the one that gets the mussels.',
+            brothOne: 'For mild, season with kosher salt and a lighter amount of Old Bay.',
+            shellfishOne: 'Add mussels only if you are making the mild version.',
+            finishOne: 'Finish with chopped parsley, lemon wedges, and warm butter on the side.'
+          },
+          {
+            key: 'spicy',
+            label: 'Spicy broth',
+            caption: 'Spicy builds the heat right into the broth with more Old Bay, Cajun seasoning, cayenne, and fresh chiles.',
+            variantName: 'Spicy broth',
+            variantDescription: 'Start with the same base, then push it harder with more Old Bay, Cajun seasoning, cayenne, and fresh chiles. Skip the mussels here and let the broth carry the heat.',
+            brothOne: 'For spicy, use a heavier hand with Old Bay plus Cajun seasoning, cayenne, and fresh chiles.',
+            shellfishOne: 'Skip the mussels in the spicy version.',
+            finishOne: 'Finish with parsley, lemon wedges, and hot butter or extra Cajun seasoning on the side.'
+          },
+          {
+            key: 'spice-later',
+            label: 'Mild + spice later',
+            caption: 'Mild plus spice later keeps the boil flexible by putting the extra heat on the table instead of directly in the broth.',
+            variantName: 'Mild broth with spice added later',
+            variantDescription: 'Build the pot as a mild boil, then let people add Cajun butter, hot sauce, or extra seasoning at the table so everyone can control the heat on their own plate.',
+            brothOne: 'For mild plus spice later, build the broth like a mild version and save Cajun butter, hot sauce, and extra seasoning for the table.',
+            shellfishOne: 'Add mussels if you are keeping the broth in the mild lane.',
+            finishOne: 'Finish with parsley, lemon wedges, melted butter, Cajun butter, and hot sauce so everyone can season their own portion.'
+          }
+        ],
+        two: [
+          {
+            key: 'both-split',
+            label: 'Both: Mild + Spicy',
+            caption: 'This is the classic two-pot setup: one pot stays mild and the other gets the full spicy treatment.',
+            variantName: 'Two pots: one mild, one spicy',
+            variantDescription: 'Run one pot as a true mild broth and the second as a true spicy broth. Keep mussels in the mild pot only, and serve the two boils in separate lanes.',
+            brothTwo: 'Season one pot mild with kosher salt and Old Bay, and season the second pot spicy with more Old Bay, Cajun seasoning, cayenne, and fresh chiles.',
+            shellfishTwo: 'Add clams to both pots, but add mussels only to the mild pot.',
+            finishTwo: 'Finish both with parsley, lemon wedges, and butter sauces, keeping hotter sauces near the spicy side.',
+            musselPlan: 'Keep all mussels in the mild pot only.',
+            serveLine: 'Dump the mild and spicy boils in two clear lanes on the table so people can choose without guessing.'
+          },
+          {
+            key: 'both-mild',
+            label: 'Both Mild',
+            caption: 'Use this if you want two pots for capacity, but both sides should stay crowd-friendly and mild.',
+            variantName: 'Two pots: both mild',
+            variantDescription: 'This is a split-capacity version, not a split-flavor version. Both pots stay in the mild lane, and mussels can go into either or both pots.',
+            brothTwo: 'Season both pots in the mild range with kosher salt and a lighter amount of Old Bay.',
+            shellfishTwo: 'Add clams to both pots, and add mussels to either or both pots if you want them in both mild sides.',
+            finishTwo: 'Finish both with parsley, lemon wedges, and warm butter on the side.',
+            musselPlan: 'You can divide the mussels between both pots, since both pots are staying mild.',
+            serveLine: 'Dump both mild boils side by side, or combine them onto the table if you prefer one shared presentation.'
+          },
+          {
+            key: 'both-spicy',
+            label: 'Both Spicy',
+            caption: 'Use this if you want two pots for capacity and both sides should be fully spicy.',
+            variantName: 'Two pots: both spicy',
+            variantDescription: 'This is a split-capacity spicy boil. Both pots get the stronger seasoning profile, and mussels stay out of both pots.',
+            brothTwo: 'Season both pots aggressively with extra Old Bay, Cajun seasoning, cayenne, and fresh chiles.',
+            shellfishTwo: 'Add clams to both pots, but skip mussels in both spicy pots.',
+            finishTwo: 'Finish both with parsley, lemon wedges, and hotter sauces on the side.',
+            musselPlan: 'Skip the mussels entirely in this setup.',
+            serveLine: 'Dump both spicy boils side by side, or combine them if you are serving one all-spicy crowd.'
+          },
+          {
+            key: 'mild-later-plus-spicy',
+            label: 'Mild + spice later + Spicy',
+            caption: 'One pot stays mild and flexible for the table, while the other pot is fully spicy from the start.',
+            variantName: 'Two pots: one mild-with-spice-later, one spicy',
+            variantDescription: 'Keep one pot in the mild lane so people can customize heat at the table, while the second pot is built as a true spicy boil. Mussels stay in the mild-side pot only.',
+            brothTwo: 'Keep one pot mild and table-friendly, and build the second pot spicy with Cajun seasoning, cayenne, and fresh chiles.',
+            shellfishTwo: 'Add clams to both pots, and keep mussels only in the mild-side pot.',
+            finishTwo: 'Set out plain butter, Cajun butter, lemon wedges, and hot sauce so the mild side can be customized while the spicy side stays ready to go.',
+            musselPlan: 'Keep all mussels in the mild-side pot only.',
+            serveLine: 'Serve the mild customizable boil and the spicy boil in separate lanes so people can choose their starting point.'
+          }
+        ]
+      };
+
+      let currentPot = 'one';
+      let currentFlavor = 'mild';
+
       const potButtons = document.querySelectorAll('[data-pot]');
-
-      const variantMild = document.getElementById('variant-mild');
-      const variantSpicy = document.getElementById('variant-spicy');
-      const variantSpiceLater = document.getElementById('variant-spice-later');
-
-      const onePotSection = document.getElementById('one-pot-section');
-      const twoPotSection = document.getElementById('two-pot-section');
+      const flavorButtonsWrap = document.getElementById('flavor-buttons');
 
       const flavorCaption = document.getElementById('flavor-caption');
       const potCaption = document.getElementById('pot-caption');
+
+      const variantName = document.getElementById('variant-name');
+      const variantDescription = document.getElementById('variant-description');
+
+      const onePotSection = document.getElementById('one-pot-section');
+      const twoPotSection = document.getElementById('two-pot-section');
 
       const brothLineOne = document.getElementById('broth-line-onepot');
       const shellfishLineOne = document.getElementById('shellfish-line-onepot');
@@ -1332,47 +1401,60 @@
       const brothLineTwo = document.getElementById('broth-line-twopot');
       const shellfishLineTwo = document.getElementById('shellfish-line-twopot');
       const finishLineTwo = document.getElementById('finish-line-twopot');
+      const twoPotMusselPlan = document.getElementById('two-pot-mussel-plan');
+      const serveLineTwo = document.getElementById('serve-line-twopot');
 
-      function setFlavor(flavor) {
-        flavorButtons.forEach((btn) => {
-          btn.classList.toggle('is-active', btn.getAttribute('data-flavor') === flavor);
+      function getFlavorConfig(pot, key) {
+        return flavorConfigs[pot].find((item) => item.key === key);
+      }
+
+      function renderFlavorButtons() {
+        const options = flavorConfigs[currentPot];
+        flavorButtonsWrap.innerHTML = '';
+
+        if (!options.some((opt) => opt.key === currentFlavor)) {
+          currentFlavor = options[0].key;
+        }
+
+        options.forEach((option) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'toggle-btn' + (option.key === currentFlavor ? ' is-active' : '');
+          btn.textContent = option.label;
+          btn.setAttribute('data-flavor-key', option.key);
+          btn.addEventListener('click', () => {
+            currentFlavor = option.key;
+            renderFlavorButtons();
+            applyFlavor();
+          });
+          flavorButtonsWrap.appendChild(btn);
         });
+      }
 
-        variantMild.style.display = flavor === 'mild' ? '' : 'none';
-        variantSpicy.style.display = flavor === 'spicy' ? '' : 'none';
-        variantSpiceLater.style.display = flavor === 'spice-later' ? '' : 'none';
+      function applyFlavor() {
+        const config = getFlavorConfig(currentPot, currentFlavor);
+        if (!config) return;
 
-        if (flavor === 'mild') {
-          flavorCaption.textContent = 'Mild keeps the broth crowd-friendly and is the only version that includes mussels.';
-          brothLineOne.textContent = 'For mild, season with kosher salt and a lighter amount of Old Bay.';
-          shellfishLineOne.textContent = 'Add mussels only if you are making the mild version.';
-          finishLineOne.textContent = 'Finish with chopped parsley, lemon wedges, and warm butter on the side.';
+        flavorCaption.textContent = config.caption;
+        variantName.textContent = config.variantName;
+        variantDescription.textContent = config.variantDescription;
 
-          brothLineTwo.textContent = 'If you are running one mild and one spicy pot, keep one pot lightly seasoned with kosher salt and Old Bay and build the heat only in the spicy pot.';
-          shellfishLineTwo.textContent = 'Add clams to both pots, but add mussels only to the mild pot.';
-          finishLineTwo.textContent = 'Finish both with chopped parsley, lemon wedges, and butter sauces, keeping the presentation simple and family-style.';
-        } else if (flavor === 'spicy') {
-          flavorCaption.textContent = 'Spicy builds the heat right into the broth with more Old Bay, Cajun seasoning, cayenne, and fresh chiles.';
-          brothLineOne.textContent = 'For spicy, use a heavier hand with Old Bay plus Cajun seasoning, cayenne, and fresh chiles.';
-          shellfishLineOne.textContent = 'Skip the mussels in the spicy version.';
-          finishLineOne.textContent = 'Finish with parsley, lemon wedges, and hot butter or extra Cajun seasoning on the side.';
-
-          brothLineTwo.textContent = 'If both pots are spicy, season both more aggressively with extra Old Bay, Cajun seasoning, cayenne, and fresh chiles; if you are doing one mild and one spicy, only build the heat in the spicy pot.';
-          shellfishLineTwo.textContent = 'Add clams to both pots if desired, but skip mussels in the spicy pot.';
-          finishLineTwo.textContent = 'Finish both with parsley, lemon wedges, and hotter sauces near the spicy side.';
+        if (currentPot === 'one') {
+          brothLineOne.textContent = config.brothOne;
+          shellfishLineOne.textContent = config.shellfishOne;
+          finishLineOne.textContent = config.finishOne;
         } else {
-          flavorCaption.textContent = 'Mild plus spice later keeps the boil flexible by putting the extra heat on the table instead of directly in the broth.';
-          brothLineOne.textContent = 'For mild plus spice later, build the broth like a mild version and save Cajun butter, hot sauce, and extra seasoning for the table.';
-          shellfishLineOne.textContent = 'Add mussels if you are keeping the broth in the mild lane.';
-          finishLineOne.textContent = 'Finish with parsley, lemon wedges, melted butter, Cajun butter, and hot sauce so everyone can season their own portion.';
-
-          brothLineTwo.textContent = 'For a mild-plus-spice-later setup, keep the mild pot clean and crowd-friendly, then put the extra heat on the table; if the second pot is spicy, season only that pot aggressively.';
-          shellfishLineTwo.textContent = 'Add clams to both pots if desired, and keep mussels only in the mild side.';
-          finishLineTwo.textContent = 'Finish with parsley, lemon wedges, plain butter, Cajun butter, and hot sauce set out separately for table seasoning.';
+          brothLineTwo.textContent = config.brothTwo;
+          shellfishLineTwo.textContent = config.shellfishTwo;
+          finishLineTwo.textContent = config.finishTwo;
+          twoPotMusselPlan.textContent = config.musselPlan;
+          serveLineTwo.textContent = config.serveLine;
         }
       }
 
       function setPot(pot) {
+        currentPot = pot;
+
         potButtons.forEach((btn) => {
           btn.classList.toggle('is-active', btn.getAttribute('data-pot') === pot);
         });
@@ -1382,15 +1464,16 @@
         twoPotSection.style.display = isTwo ? '' : 'none';
 
         if (isTwo) {
-          potCaption.textContent = 'Two pots at once rewrites the cook into a parallel mild-and-spicy workflow that is easier to manage during a big gathering.';
+          potCaption.textContent = 'Two pots at once lets you run separate flavor lanes or simply split the load for a bigger batch.';
+          currentFlavor = 'both-split';
         } else {
           potCaption.textContent = 'One pot keeps the whole recipe in one clean flow if you only have one burner.';
+          currentFlavor = 'mild';
         }
-      }
 
-      flavorButtons.forEach((btn) => {
-        btn.addEventListener('click', () => setFlavor(btn.getAttribute('data-flavor')));
-      });
+        renderFlavorButtons();
+        applyFlavor();
+      }
 
       potButtons.forEach((btn) => {
         btn.addEventListener('click', () => setPot(btn.getAttribute('data-pot')));
@@ -1398,7 +1481,6 @@
 
       updateServings(parseInt(select.value, 10));
       syncStepperState();
-      setFlavor('mild');
       setPot('one');
     </script>
   </body>
