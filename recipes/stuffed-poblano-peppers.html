@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stuffed Poblano Peppers, Three Ways — Tom's Kitchen</title>
+    <meta name="description" content="Par-roasted poblano halves stuffed with chorizo, ground beef, and ground chicken fillings built on one shared onion, garlic, red pepper, jalapeno, and serrano base, folded with freshly shredded cheese. Includes freezing and reheating times." />
+    <meta property="og:title" content="Stuffed Poblano Peppers, Three Ways — Tom's Kitchen" />
+    <meta property="og:description" content="Par-roasted poblano halves stuffed with chorizo, ground beef, and ground chicken fillings built on one shared onion, garlic, red pepper, jalapeno, and serrano base, folded with freshly shredded cheese. Includes freezing and reheating times." />
+    <meta property="og:image" content="../assets/images/stuffed-poblano-peppers.jpg" />
+    <meta property="og:type" content="article" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Libre+Caslon+Text:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%8D%B4%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #f5efe2;
+        --paper: #fbf6ea;
+        --surface: #ffffff;
+        --ink: #3a2f24;
+        --ink-muted: #7a6a58;
+        --ink-faint: #b8a78f;
+        --rule: #d9cdb6;
+        --rule-soft: #e8ddc5;
+        --accent: #16365D;
+        --accent-deep: #0E2542;
+        --accent-soft: #2c4f7a;
+        --tomato: #B85C3A;
+        --display: 'Libre Caslon Text', Georgia, serif;
+        --hand: 'Caveat', cursive;
+        --body: 'Work Sans', -apple-system, sans-serif;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+      body {
+        font-family: var(--body);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--ink);
+        background: var(--bg);
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(196, 74, 53, 0.04) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(92, 127, 86, 0.05) 0%, transparent 50%);
+        min-height: 100vh;
+      }
+      a { color: inherit; }
+      img { display: block; max-width: 100%; }
+
+      .container { max-width: 880px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+      }
+
+      /* Header */
+      header.site {
+        padding: 2rem 0 1.5rem;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      .brand-logo {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+      .brand-divider {
+        width: 1px;
+        height: 28px;
+        background: var(--rule);
+      }
+      .brand-wordmark {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .brand-wordmark .top {
+        font-family: var(--display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+      }
+      .brand-wordmark .bottom {
+        font-family: var(--display);
+        font-size: 0.8rem;
+        font-style: italic;
+        color: var(--ink-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-top: 3px;
+      }
+      @media (max-width: 480px) {
+        .brand-logo { height: 32px; }
+        .brand-wordmark .top { font-size: 1rem; }
+        .brand-wordmark .bottom { font-size: 0.7rem; }
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+      }
+      .nav-links a {
+        color: inherit;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: color 200ms, border-color 200ms;
+      }
+      .nav-links a:hover {
+        color: var(--accent-deep);
+        border-bottom-color: var(--accent);
+      }
+      @media (max-width: 720px) { .nav-links { display: none; } }
+
+      /* Back link */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: color 200ms;
+      }
+      .back-link:hover { color: var(--accent-deep); }
+
+      /* Hero photo */
+      .recipe-hero {
+        max-width: 720px;
+        margin: 1.5rem auto 0;
+        padding: 0 clamp(1.5rem, 4vw, 3rem);
+        display: flex;
+        justify-content: center;
+      }
+      .recipe-hero-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--rule);
+        background: var(--surface);
+        box-shadow: 0 8px 32px rgba(58, 47, 36, 0.10);
+      }
+      .recipe-hero-img img {
+        width: 100%; height: 100%; object-fit: cover; object-position: center;
+        display: block;
+      }
+
+      /* Title block */
+      .title-block {
+        text-align: center;
+        padding: 3rem 0 1.5rem;
+      }
+      .kicker {
+        font-family: var(--hand);
+        font-size: 1.5rem;
+        color: var(--tomato);
+        margin-bottom: 0.5rem;
+        transform: rotate(-2deg);
+        display: inline-block;
+      }
+      h1 {
+        font-family: var(--display);
+        font-size: clamp(2.25rem, 1.4rem + 3vw, 3.75rem);
+        line-height: 1.05;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        margin-bottom: 1rem;
+        text-wrap: balance;
+        font-style: italic;
+      }
+      .lede {
+        font-size: 1.125rem;
+        line-height: 1.55;
+        color: var(--ink-muted);
+        max-width: 56ch;
+        margin: 0 auto;
+      }
+
+      /* Meta strip */
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        overflow: hidden;
+        margin-top: 2.5rem;
+      }
+      .meta-cell {
+        padding: 1rem 1.25rem;
+        text-align: center;
+        border-right: 1px solid var(--rule-soft);
+      }
+      .meta-cell:last-child { border-right: none; }
+      @media (max-width: 560px) {
+        .meta-cell { border-right: none; border-bottom: 1px solid var(--rule-soft); }
+        .meta-cell:last-child { border-bottom: none; }
+      }
+      .meta-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.25rem;
+      }
+      .meta-value {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.375rem;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+      .meta-value small {
+        font-family: var(--body);
+        font-style: normal;
+        font-size: 0.8125rem;
+        color: var(--ink-muted);
+      }
+
+      /* Servings selector */
+      .servings-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .servings-label { font-size: 0.875rem; color: var(--ink-muted); }
+      .servings-label strong { color: var(--ink); font-weight: 600; font-family: var(--display); font-style: italic; font-size: 1rem; }
+      .servings-control { display: flex; align-items: center; gap: 0.5rem; }
+      .step-btn {
+        width: 36px; height: 36px;
+        border-radius: 999px;
+        border: 1px solid var(--rule);
+        background: var(--surface);
+        color: var(--ink);
+        font-size: 1.125rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 180ms ease;
+      }
+      .step-btn:hover:not(:disabled) {
+        border-color: var(--accent);
+        color: var(--accent-deep);
+      }
+      .step-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+      select.servings-select {
+        font-family: var(--body);
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.5rem 2rem 0.5rem 1rem;
+        border: 1px solid var(--rule);
+        background-color: var(--surface);
+        color: var(--ink);
+        border-radius: 999px;
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%237a6a58'%3e%3cpath d='M5 8l5 5 5-5z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 0.5rem center;
+        background-size: 1.1em;
+        transition: all 180ms ease;
+      }
+      select.servings-select:hover,
+      select.servings-select:focus {
+        border-color: var(--accent);
+        outline: none;
+      }
+
+      /* Section headings */
+      h2 {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem);
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: var(--ink);
+      }
+      h2 .accent { color: var(--tomato); font-style: italic; }
+      h3 {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: var(--ink-muted);
+        margin: 1.5rem 0 0.75rem;
+      }
+      h3:first-child { margin-top: 0; }
+
+      /* Two-col layout for ingredients/tools */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: clamp(1.5rem, 4vw, 2.5rem);
+        margin-top: 3rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--rule);
+      }
+      @media (max-width: 720px) {
+        .two-col { grid-template-columns: 1fr; }
+      }
+      .ing-list, .tool-list {
+        list-style: none;
+      }
+      .ing-list li {
+        display: grid;
+        grid-template-columns: 6.5rem 1fr;
+        gap: 0.75rem;
+        padding: 0.55rem 0;
+        border-bottom: 1px dashed var(--rule-soft);
+        font-size: 0.95rem;
+      }
+      .ing-list li:last-child { border-bottom: none; }
+      .ing-list .qty {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.0625rem;
+        color: var(--accent-deep);
+        font-weight: 400;
+      }
+      .ing-list .item { color: var(--ink); }
+      .ing-list li.ing-header {
+        display: block;
+        grid-template-columns: none;
+        padding: 1rem 0 0.4rem;
+        border-bottom: none;
+      }
+      .ing-list li.ing-header:first-child { padding-top: 0.2rem; }
+      .ing-list .ing-header-label {
+        font-family: var(--kicker);
+        font-size: 1.05rem;
+        color: var(--accent-deep);
+        letter-spacing: 0.01em;
+      }
+      .tool-list li {
+        padding: 0.4rem 0 0.4rem 1.25rem;
+        position: relative;
+        font-size: 0.95rem;
+        color: var(--ink-muted);
+      }
+      .tool-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0.25rem;
+        color: var(--tomato);
+        font-weight: 600;
+      }
+
+      /* Method section */
+      .section {
+        margin-top: 3rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      /* Steps */
+      ol.steps {
+        list-style: none;
+        counter-reset: step;
+      }
+      ol.steps li {
+        position: relative;
+        padding-left: 3rem;
+        padding-bottom: 1.5rem;
+        counter-increment: step;
+      }
+      ol.steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: -0.125rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        color: var(--tomato);
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.125rem;
+        font-weight: 400;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+      ol.steps li p { margin-bottom: 0.5rem; }
+      ol.steps li p:last-child { margin-bottom: 0; }
+      ol.steps li p.step-note {
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+        font-style: italic;
+        background: var(--paper);
+        padding: 0.75rem 1rem;
+        border-left: 3px solid var(--accent);
+        border-radius: 4px;
+        margin-top: 0.5rem;
+      }
+
+      /* Stages (cook section) */
+      .stage {
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .stage-title {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .stage-num {
+        font-family: var(--hand);
+        font-size: 2rem;
+        color: var(--tomato);
+        line-height: 1;
+      }
+      .stage-name {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.25rem;
+        color: var(--ink);
+      }
+      .stage ul {
+        list-style: none;
+        padding: 0;
+      }
+      .stage li {
+        padding: 0.35rem 0 0.35rem 1.25rem;
+        position: relative;
+        font-size: 0.95rem;
+      }
+      .stage li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      /* Plating callout */
+      .plating {
+        margin-top: 2rem;
+        padding: 1.75rem 2rem;
+        background: linear-gradient(135deg, rgba(196, 74, 53, 0.07), rgba(92, 127, 86, 0.07));
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        text-align: center;
+      }
+      .plating-kicker {
+        font-family: var(--hand);
+        font-size: 1.5rem;
+        color: var(--tomato);
+        margin-bottom: 0.5rem;
+        transform: rotate(-1deg);
+        display: inline-block;
+      }
+      .plating p {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.125rem;
+        line-height: 1.55;
+        color: var(--ink);
+        max-width: 58ch;
+        margin: 0 auto;
+      }
+      .plating p strong { font-family: var(--body); font-style: normal; font-weight: 600; }
+
+      /* Tips */
+      .tips {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .tip {
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        padding: 1.125rem 1.25rem;
+      }
+      .tip strong {
+        display: block;
+        font-family: var(--display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.0625rem;
+        color: var(--ink);
+        margin-bottom: 0.35rem;
+      }
+      .tip p {
+        font-size: 0.9rem;
+        color: var(--ink-muted);
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* Print button */
+      .actions-row {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .action-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--surface);
+        color: var(--ink);
+        text-decoration: none;
+        padding: 0.625rem 1.125rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid var(--rule);
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 200ms;
+      }
+      .action-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent-deep);
+      }
+
+      /* Footer */
+      footer.site {
+        padding: 3rem 0 2.5rem;
+        text-align: center;
+        font-size: 0.8125rem;
+        color: var(--ink-faint);
+        border-top: 1px solid var(--rule);
+        margin-top: 4rem;
+      }
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+        margin-bottom: 0.5rem;
+      }
+      .footer-logo {
+        height: 28px;
+        width: auto;
+        opacity: 0.9;
+      }
+      .footer-brand-text {
+        font-family: var(--display);
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+      }
+      .heart { color: var(--tomato); }
+
+      /* Print styles */
+      @media print {
+        body { background: white; color: black; }
+        header.site, footer.site, .servings-bar, .actions-row, .back-link, .nav-links { display: none !important; }
+        .title-block { padding-top: 0.5rem; }
+        .meta { background: white; }
+        .stage, .tip, .plating, .paper { background: white !important; border: 1px solid #ddd !important; }
+        h1 { font-size: 1.8rem; }
+        .section, .two-col { page-break-inside: avoid; }
+        /* Compact hero photo for print so it fits with the title on page 1 */
+        .recipe-hero {
+          max-width: 100% !important;
+          margin: 0 auto 0.5rem !important;
+          padding: 0 !important;
+          page-break-inside: avoid;
+        }
+        .recipe-hero-img {
+          width: 55% !important;
+          margin: 0 auto;
+          aspect-ratio: 1/1 !important;
+          border-radius: 8px !important;
+          border: 1px solid #ccc !important;
+          box-shadow: none !important;
+        }
+        .recipe-hero-img img {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        @page { margin: 1.5cm; }
+      }
+    
+      /* Reheat times table */
+      .table-wrap {
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        overflow-x: auto;
+        background: var(--paper);
+        margin-top: 0.5rem;
+      }
+      table.times {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+        min-width: 560px;
+      }
+      table.times th {
+        font-family: var(--body);
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        text-align: left;
+        padding: 0.85rem 1.1rem;
+        border-bottom: 1px solid var(--rule);
+        white-space: nowrap;
+      }
+      table.times td {
+        padding: 0.8rem 1.1rem;
+        border-bottom: 1px dashed var(--rule-soft);
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      table.times tbody tr:last-child td { border-bottom: none; }
+      table.times td:first-child { color: var(--ink); font-weight: 500; }
+      table.times td:nth-child(2) {
+        font-family: var(--display);
+        font-style: italic;
+        color: var(--accent-deep);
+        white-space: nowrap;
+      }
+      table.times td:last-child { color: var(--ink-muted); }
+      .table-note {
+        font-size: 0.9rem;
+        color: var(--ink-muted);
+        line-height: 1.6;
+        margin-top: 1rem;
+      }
+      @media print {
+        .table-wrap { background: white !important; border: 1px solid #ddd !important; }
+        table.times { min-width: 0; font-size: 0.8rem; page-break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="container nav">
+        <a href="../index.html" class="brand" aria-label="Tom's Kitchen home">
+          <img class="brand-logo" src="../assets/images/tg-monogram.png" alt="TG monogram" />
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-wordmark">
+            <span class="top">Tom's Kitchen</span>
+            <span class="bottom">Recipes</span>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="../index.html#recipes">Recipes</a>
+          <a href="../index.html#about">About</a>
+        </nav>
+      </div>
+      <div class="container">
+        <a href="../index.html" class="back-link">← Back to all recipes</a>
+      </div>
+    </header>
+
+    <section class="recipe-hero">
+      <div class="recipe-hero-img">
+        <img src="../assets/images/stuffed-poblano-peppers.jpg" alt="Six roasted poblano pepper halves on a walnut board, stuffed with chorizo, ground beef, and ground chicken fillings under browned shredded cheese, with a brick-red bowl of cheese, whole serrano peppers, cilantro, and cream linen" />
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="title-block">
+        <div class="kicker">three fillings, one pan —</div>
+        <h1>Stuffed Poblano Peppers, Three Ways</h1>
+        <p class="lede">
+          Halved poblanos par-roasted until they just bend, then loaded with
+          three fillings built off one shared flavor base of onion, garlic, red
+          pepper, jalapeño, and serrano. Chorizo, ground beef, and ground
+          chicken, each folded with freshly shredded cheese off the heat. Bake
+          a tray tonight and stack the rest in the freezer.
+        </p>
+      </section>
+
+      <div class="meta">
+        <div class="meta-cell">
+          <div class="meta-label">Halves</div>
+          <div class="meta-value" id="meta-servings">12</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Prep</div>
+          <div class="meta-value">35 <small>min</small></div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Bake</div>
+          <div class="meta-value">18–22 <small>min</small></div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-label">Oven</div>
+          <div class="meta-value">400<small>°F</small></div>
+        </div>
+      </div>
+
+      <div class="servings-bar">
+        <div class="servings-label">
+          Recipe scaled for
+          <strong id="label-servings">12 halves (6 poblanos) · 4 per filling</strong>
+        </div>
+        <div class="servings-control">
+          <button type="button" class="step-btn" id="decrement" aria-label="Decrease number of halves">−</button>
+          <label for="servings" class="sr-only">Select number of pepper halves</label>
+          <select id="servings" class="servings-select" aria-label="Number of pepper halves">
+            <option value="6">6 halves (3 poblanos)</option>
+            <option value="12" selected>12 halves (6 poblanos)</option>
+            <option value="18">18 halves (9 poblanos)</option>
+            <option value="24">24 halves (12 poblanos)</option>
+          </select>
+          <button type="button" class="step-btn" id="increment" aria-label="Increase number of halves">+</button>
+        </div>
+      </div>
+
+      <section class="two-col">
+        <div>
+          <h2>Ingredients</h2>
+          <ul class="ing-list" id="ing-main"></ul>
+        </div>
+        <div>
+          <h2>Tools</h2>
+          <ul class="tool-list">
+            <li>Sheet pan and parchment paper</li>
+            <li>Large skillet (12-inch, cast iron is ideal)</li>
+            <li>Box grater or food processor shredding disc</li>
+            <li>Baking dish or second sheet pan for the bake</li>
+            <li>Spoon or small paring knife for seeding</li>
+            <li>Nitrile gloves (for the serranos and jalapeño)</li>
+            <li>Instant-read thermometer</li>
+            <li>Three medium bowls, one per filling</li>
+            <li>Plastic wrap, heavy foil, or a vacuum sealer</li>
+            <li>Freezer bags and a marker for labeling</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Prep</span> — about 35 minutes</h2>
+        <ol class="steps">
+          <li>
+            <p><strong>Heat the oven and clean the peppers.</strong> Set the oven to <strong>425°F</strong>. Slice each poblano in half lengthwise from stem to tip, leaving the stem attached to one half for structure. Scrape out the seeds and white ribs with a spoon.</p>
+            <p class="step-note">Leave the stem on where you can. It acts like a handle and keeps the half from collapsing when you stuff it.</p>
+          </li>
+          <li>
+            <p><strong>Par-roast the poblano halves.</strong> Toss the halves with oil and a pinch of salt, lay them cut-side down on a parchment-lined sheet pan, and roast <strong>12–15 minutes</strong>, until the skins blister in spots and the flesh bends without tearing. Turn them cut-side up and let them cool. Pour off any water that collected.</p>
+            <p class="step-note">Do not skip this. Raw poblanos go into the oven with a lot of water in them, and it ends up in the bottom of the pan and under your cheese. Par-roasting drives it off and gives you a tender pepper instead of a crunchy one.</p>
+          </li>
+          <li>
+            <p><strong>Cut the aromatics.</strong> Dice the onion and red bell pepper small, mince the jalapeño and serranos, and mince the garlic. Wear gloves for the hot peppers, and decide your heat now: seeds and ribs in for hot, seeds out for medium.</p>
+          </li>
+          <li>
+            <p><strong>Mix the spice blend and split it in three.</strong> Stir the cumin, chili powder, smoked paprika, and Mexican oregano together, then divide into three equal piles, about <strong>2 teaspoons each</strong>. One pile per filling.</p>
+          </li>
+          <li>
+            <p><strong>Shred the cheese fresh.</strong> Grate each cheese on a box grater and keep the piles separate. Hold back about <strong>2 ounces of each</strong> for the tops. Refrigerate until you fold it in.</p>
+            <p class="step-note">Bagged shredded cheese is coated in potato starch and cellulose. It melts thick and a little grainy. Freshly shredded is the whole point of folding cheese into the filling instead of just piling it on top.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Cook</span> — one base, three fillings</h2>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">01</span>
+            <span class="stage-name">Build the shared flavor base</span>
+          </div>
+          <ul>
+            <li>Heat <strong>2 tbsp oil</strong> in the large skillet over medium-high.</li>
+            <li>Onion first, <strong>4–5 minutes</strong>, until the edges go translucent and start to color.</li>
+            <li>Red bell pepper, <strong>3 minutes</strong>. Jalapeño and serrano, <strong>2 minutes</strong>. Garlic last, <strong>45 seconds</strong>, just until it smells sweet.</li>
+            <li>Season with the salt and black pepper. You should have roughly <strong>4 cups</strong> of base.</li>
+            <li>Scrape the base into a bowl and <strong>divide it into three equal portions</strong>, about 1⅓ cups each. Wipe the skillet.</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">02</span>
+            <span class="stage-name">Chorizo filling</span>
+          </div>
+          <ul>
+            <li>Cook the fresh chorizo over medium heat <strong>6–8 minutes</strong>, breaking it up, until deep red and fully rendered.</li>
+            <li><strong>Drain off all but about 1 tbsp of fat.</strong> Chorizo gives up a lot, and the extra will pool in the pepper.</li>
+            <li>Add one portion of base and one portion of spice blend, cook <strong>1 minute</strong>.</li>
+            <li>Off the heat, stir in the lime juice and cilantro. Taste for salt — chorizo is already well seasoned, so it may need none.</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">03</span>
+            <span class="stage-name">Ground beef filling</span>
+          </div>
+          <ul>
+            <li>Brown the ground beef over medium-high <strong>6–8 minutes</strong>, breaking it up, until no pink remains and some of it has crusted.</li>
+            <li>Drain the fat, leaving about <strong>1 tbsp</strong> in the pan.</li>
+            <li>Add one portion of base, one portion of spice blend, and the tomato paste. Cook <strong>1 minute</strong> to toast the paste.</li>
+            <li>Pour in the broth or beer and the Worcestershire, and simmer <strong>2–3 minutes</strong> until the pan is nearly dry and the mixture just holds together.</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">04</span>
+            <span class="stage-name">Ground chicken filling</span>
+          </div>
+          <ul>
+            <li>Melt the butter with a teaspoon of oil over medium heat, then add the ground chicken.</li>
+            <li>Cook <strong>7–9 minutes</strong>, breaking it up, until it is opaque throughout and lightly browned in spots. Ground chicken is lean, so let it get a little color instead of just steaming it pale.</li>
+            <li>Add the last portion of base and spice blend, cook <strong>1 minute</strong>, then add the broth and simmer <strong>2 minutes</strong> until nearly dry.</li>
+            <li>Off the heat, stir in the lime juice and cilantro.</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">05</span>
+            <span class="stage-name">Cool, then fold in the cheese</span>
+          </div>
+          <ul>
+            <li>Let each filling sit <strong>10 minutes</strong>, until warm rather than steaming. About 150°F is right.</li>
+            <li>Fold <strong>1½ cups (6 oz) of freshly shredded cheese</strong> into each filling until it just turns stringy and binds the mixture. Do not stir it smooth.</li>
+            <li>Pairings that work: <strong>Oaxaca or low-moisture mozzarella with the chorizo</strong>, <strong>sharp cheddar with the beef</strong>, <strong>pepper jack with the chicken</strong>.</li>
+            <li>Screaming-hot filling breaks the cheese into grease. Warm filling turns it into the binder that holds the stuffing together.</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">06</span>
+            <span class="stage-name">Stuff, then bake the fresh tray</span>
+          </div>
+          <ul>
+            <li>Drop the oven to <strong>400°F</strong>.</li>
+            <li>Mound about <strong>⅓ to ½ cup of filling</strong> into each pepper half, pressing gently so it holds. Keep the three fillings grouped so you can tell them apart later.</li>
+            <li>Arrange in a baking dish or on a sheet pan, snug enough that they hold each other upright. Top each with the reserved shredded cheese.</li>
+            <li>Bake <strong>18–22 minutes</strong>, until the cheese is melted and bubbling at the edges and the filling reads <strong>165°F</strong> in the center.</li>
+            <li>For color, run them under the broiler <strong>1–2 minutes</strong> at the end. Watch them the whole time.</li>
+            <li>Rest <strong>5 minutes</strong> before serving so the cheese sets and the filling stops sliding out.</li>
+          </ul>
+        </div>
+
+        <div class="plating">
+          <div class="plating-kicker">to serve —</div>
+          <p>
+            Two halves per person, one of each filling if you are feeding a
+            crowd. Finish with <strong>lime crema</strong>, crumbled cotija,
+            chopped cilantro, and quick-pickled red onion. The
+            <a href="steak-street-tacos.html">chili-lime aioli from the street tacos</a>
+            works here too if you already have it in the fridge.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent">Freeze</span> — build now, bake later</h2>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">A</span>
+            <span class="stage-name">Freeze unbaked (the better way)</span>
+          </div>
+          <ul>
+            <li>Stuff the par-roasted halves as usual but <strong>leave the topping cheese off</strong>. You will add it during the reheat so it browns fresh.</li>
+            <li>Cool the stuffed peppers completely, then <strong>flash-freeze them uncovered</strong> on a parchment-lined sheet pan for <strong>2–3 hours</strong>, until firm to the touch.</li>
+            <li>Wrap each one individually in plastic wrap and then foil, or vacuum seal them in pairs.</li>
+            <li>Group by filling in labeled freezer bags: <strong>filling type and date</strong>. Once frozen, chorizo and beef look identical.</li>
+            <li>Quality holds for <strong>3 months</strong>, and they are still safe well past that.</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="stage-title">
+            <span class="stage-num">B</span>
+            <span class="stage-name">Freeze fully baked</span>
+          </div>
+          <ul>
+            <li>Bake as normal, cheese and all, then cool completely — about <strong>30 minutes</strong> on a rack.</li>
+            <li>Flash-freeze and wrap exactly as above.</li>
+            <li>This is the faster weeknight option, but the pepper comes out a little softer since it gets cooked twice.</li>
+          </ul>
+        </div>
+
+        <h3>Reheating times</h3>
+        <div class="table-wrap">
+          <table class="times">
+            <thead>
+              <tr>
+                <th>Starting from</th>
+                <th>Method</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frozen, unbaked</td>
+                <td>Oven, 375°F</td>
+                <td>Covered with foil <strong>35–40 min</strong>, then uncover, add cheese, <strong>12–15 min</strong> more</td>
+              </tr>
+              <tr>
+                <td>Thawed overnight, unbaked</td>
+                <td>Oven, 400°F</td>
+                <td>Covered <strong>15 min</strong>, then uncover, add cheese, <strong>10–12 min</strong> more</td>
+              </tr>
+              <tr>
+                <td>Frozen, already baked</td>
+                <td>Oven, 350°F</td>
+                <td>Covered <strong>30 min</strong>, then uncover <strong>8–10 min</strong></td>
+              </tr>
+              <tr>
+                <td>Frozen, unbaked</td>
+                <td>Air fryer, 350°F</td>
+                <td><strong>16–20 min</strong>, cheese added for the last <strong>4 min</strong></td>
+              </tr>
+              <tr>
+                <td>Frozen, already baked</td>
+                <td>Air fryer, 340°F</td>
+                <td><strong>10–12 min</strong>, cheese refreshed for the last <strong>3 min</strong></td>
+              </tr>
+              <tr>
+                <td>Fresh leftovers, from the fridge</td>
+                <td>Oven or air fryer, 350°F</td>
+                <td><strong>10–12 min</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">
+          Every version is done at the same finish line: <strong>165°F in the
+          center of the filling</strong> and cheese bubbling at the edges. Loose
+          foil for the covered stage keeps the pepper from drying out while the
+          middle catches up. The microwave works in a pinch — 2–3 minutes at 50%
+          power — but the pepper goes limp and weepy, so it is the last resort.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Tips &amp; pitfalls</h2>
+        <div class="tips">
+          <div class="tip">
+            <strong>Par-roast, always</strong>
+            <p>Twelve to fifteen minutes cut-side down at 425°F. It softens the pepper and drives off the water that otherwise pools under the cheese.</p>
+          </div>
+          <div class="tip">
+            <strong>Poblano heat is a coin flip</strong>
+            <p>Most are mild, but some run genuinely hot. Taste a raw sliver before you decide how much serrano to add.</p>
+          </div>
+          <div class="tip">
+            <strong>Dial heat with seeds and ribs</strong>
+            <p>Serrano flesh alone is a warm background. Leave the seeds and white ribs in and it climbs fast. Split the difference by seeding the jalapeño and keeping the serrano seeds.</p>
+          </div>
+          <div class="tip">
+            <strong>Drain the fat, especially the chorizo</strong>
+            <p>Leave about a tablespoon for flavor and pour off the rest. Excess fat separates in the freezer and runs out when you reheat.</p>
+          </div>
+          <div class="tip">
+            <strong>Fold cheese into warm, not hot</strong>
+            <p>Wait 10 minutes off the heat. Around 150°F the cheese binds the filling. Straight off the burner it splits into oil.</p>
+          </div>
+          <div class="tip">
+            <strong>Shred it yourself</strong>
+            <p>Pre-shredded is coated in starch to stop clumping, which is exactly what you do not want in a filling that depends on a clean melt.</p>
+          </div>
+          <div class="tip">
+            <strong>Keep freezer fillings drier</strong>
+            <p>For the halves you plan to freeze, simmer the liquid down a little further. Ice crystals add moisture back on the reheat.</p>
+          </div>
+          <div class="tip">
+            <strong>Do not overfill</strong>
+            <p>A mound just above the rim is right. Overstuffed halves tip, split, and dump filling into the pan.</p>
+          </div>
+          <div class="tip">
+            <strong>Label everything</strong>
+            <p>Chorizo, beef, and chicken are indistinguishable through freezer wrap. Write the filling and the date on every bag.</p>
+          </div>
+          <div class="tip">
+            <strong>Cheese on top goes on last</strong>
+            <p>Freeze them bare and add the topping cheese during the reheat. Cheese frozen on top browns unevenly and turns rubbery.</p>
+          </div>
+          <div class="tip">
+            <strong>Gloves for the hot peppers</strong>
+            <p>Serrano oil stays on your fingers through several hand washes and finds your eyes hours later. Nitrile gloves, then toss them.</p>
+          </div>
+          <div class="tip">
+            <strong>Want a binder? Optional black beans</strong>
+            <p>The cheese already binds these, so no filler is needed. If you want to stretch the batch or bulk it up, fold ⅔ cup of rinsed black beans into each filling. It also freezes and reheats a touch better.</p>
+          </div>
+          <div class="tip">
+            <strong>Make one meatless</strong>
+            <p>Swap a protein for two cans of rinsed black beans plus a cup of roasted corn, seasoned with the same spice portion. Same base, same cheese fold.</p>
+          </div>
+          <div class="tip">
+            <strong>Base ahead of time</strong>
+            <p>The onion, pepper, jalapeño, serrano, and garlic base keeps 3 days in the fridge. Making it a day ahead turns this into a much shorter cook.</p>
+          </div>
+          <div class="tip">
+            <strong>Give the air fryer room</strong>
+            <p>Four halves at a time, in one layer with space between them. Crowd the basket and they steam instead of browning.</p>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button type="button" class="action-btn" onclick="window.print()">🖨 Print this recipe</button>
+          <a href="../index.html" class="action-btn">← Back to all recipes</a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site">
+      <div class="container">
+        <div class="footer-brand">
+          <img class="footer-logo" src="../assets/images/tg-monogram.png" alt="TG monogram" />
+          <span class="footer-brand-text">Tom's Kitchen</span>
+        </div>
+        <div>Made with <span class="heart">♥</span> · est. 2026</div>
+      </div>
+    </footer>
+
+    <script>
+      // ── Recipe data ─────────────────────────────────────────────
+      // Base = 12 pepper halves (6 poblanos), 4 halves per filling.
+      // Everything scales linearly by factor = halves / 12, including
+      // each protein, the shared vegetable base, and the cheese.
+      const ORIGINAL_HALVES = 12;
+
+      function prettyAmount(value) {
+        if (value === 0) return '0';
+        const whole = Math.floor(value);
+        const remainder = value - whole;
+        const fractions = [
+          [0, ''], [1/8, '⅛'], [1/6, '⅙'], [1/4, '¼'], [1/3, '⅓'],
+          [3/8, '⅜'], [1/2, '½'], [5/8, '⅝'], [2/3, '⅔'], [3/4, '¾'],
+          [5/6, '⅚'], [7/8, '⅞'], [1, ''],
+        ];
+        let best = fractions[0];
+        let bestDiff = Math.abs(remainder - fractions[0][0]);
+        for (const f of fractions) {
+          const diff = Math.abs(remainder - f[0]);
+          if (diff < bestDiff) { best = f; bestDiff = diff; }
+        }
+        const adjustWhole = best[0] === 1 ? whole + 1 : whole;
+        const frac = best[0] === 1 || best[0] === 0 ? '' : best[1];
+        if (bestDiff < 0.04) {
+          if (adjustWhole === 0) return frac || '0';
+          if (!frac) return String(adjustWhole);
+          return adjustWhole + ' ' + frac;
+        }
+        return value.toFixed(2).replace(/\.?0+$/, '');
+      }
+
+      function plural(n, one, many) {
+        return prettyAmount(n) + ' ' + (Math.abs(n - 1) < 0.01 ? one : many);
+      }
+
+      const main = [
+        // ── The peppers
+        { header: 'The peppers' },
+        { base: 6, render: (n) => ({ qty: prettyAmount(n), item: 'large poblano peppers, halved lengthwise, seeds and ribs removed' }) },
+        { base: 1, render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'avocado or grapeseed oil (for roasting)' }) },
+        { base: 1, render: () => ({ qty: 'To taste', item: 'kosher salt' }), static: true },
+
+        // ── Shared flavor base
+        { header: 'Shared flavor base (split three ways)' },
+        { base: 2,   render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'avocado or grapeseed oil' }) },
+        { base: 1,   render: (n) => ({ qty: prettyAmount(n), item: 'large yellow onion, finely diced (about 2 cups)' }) },
+        { base: 1,   render: (n) => ({ qty: prettyAmount(n), item: 'red bell pepper, finely diced' }) },
+        { base: 1,   render: (n) => ({ qty: prettyAmount(n), item: 'jalapeño, seeded and minced' }) },
+        { base: 2,   render: (n) => ({ qty: prettyAmount(n), item: 'serrano peppers, minced (seeds and ribs in for more heat)' }) },
+        { base: 6,   render: (n) => ({ qty: prettyAmount(n), item: 'garlic cloves, minced' }) },
+        { base: 1.5, render: (n) => ({ qty: prettyAmount(n) + ' tsp', item: 'kosher salt' }) },
+        { base: 1,   render: (n) => ({ qty: prettyAmount(n) + ' tsp', item: 'freshly ground black pepper' }) },
+
+        // ── Spice blend
+        { header: 'Spice blend (split three ways)' },
+        { base: 1, render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'ground cumin' }) },
+        { base: 1, render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'chili powder' }) },
+        { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'smoked paprika' }) },
+        { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'Mexican oregano, crushed between your palms' }) },
+
+        // ── Chorizo filling
+        { header: 'Chorizo filling (fills 4 halves)' },
+        { base: 1, render: (n) => ({ qty: prettyAmount(n) + ' lb',   item: 'fresh Mexican chorizo, casings removed' }) },
+        { base: 1, render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'fresh lime juice' }) },
+        { base: 2, render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'cilantro, chopped' }) },
+        { base: 6, render: (n) => ({ qty: prettyAmount(n) + ' oz',   item: 'Oaxaca or low-moisture mozzarella, freshly shredded (about 1½ cups)' }) },
+
+        // ── Ground beef filling
+        { header: 'Ground beef filling (fills 4 halves)' },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' lb',   item: 'ground beef, 80/20' }) },
+        { base: 2,    render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'tomato paste' }) },
+        { base: 0.25, render: (n) => ({ qty: prettyAmount(n) + ' cup',  item: 'beef broth or lager' }) },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' tsp',  item: 'Worcestershire sauce' }) },
+        { base: 6,    render: (n) => ({ qty: prettyAmount(n) + ' oz',   item: 'sharp cheddar, freshly shredded (about 1½ cups)' }) },
+
+        // ── Ground chicken filling
+        { header: 'Ground chicken filling (fills 4 halves)' },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' lb',   item: 'ground chicken' }) },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'unsalted butter (chicken is lean — it needs the fat)' }) },
+        { base: 0.25, render: (n) => ({ qty: prettyAmount(n) + ' cup',  item: 'chicken broth' }) },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'fresh lime juice' }) },
+        { base: 2,    render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'cilantro, chopped' }) },
+        { base: 6,    render: (n) => ({ qty: prettyAmount(n) + ' oz',   item: 'pepper jack, freshly shredded (about 1½ cups)' }) },
+
+        // ── For the tops
+        { header: 'For the tops' },
+        { base: 6, render: (n) => ({ qty: prettyAmount(n) + ' oz', item: 'shredded cheese held back from the three piles, about 2 oz each' }) },
+
+        // ── Optional
+        { header: 'Optional add-ins &amp; garnish' },
+        { base: 2,    render: (n) => ({ qty: prettyAmount(n) + ' cups', item: 'black beans, rinsed and drained — ⅔ cup folded into each filling as a binder and stretcher' }) },
+        { base: 0.5,  render: (n) => ({ qty: prettyAmount(n) + ' cup',  item: 'sour cream, for the lime crema' }) },
+        { base: 1,    render: (n) => ({ qty: prettyAmount(n) + ' tbsp', item: 'fresh lime juice, for the lime crema' }) },
+        { base: 0.25, render: (n) => ({ qty: prettyAmount(n) + ' cup',  item: 'cotija, crumbled (for finishing)' }) },
+        { base: 1,    render: () => ({ qty: '', item: 'Cilantro, pickled red onion, and lime wedges, to serve' }), static: true },
+      ];
+
+      function renderList(targetId, items, factor) {
+        const ul = document.getElementById(targetId);
+        ul.innerHTML = '';
+        for (const ing of items) {
+          if (ing.header) {
+            const li = document.createElement('li');
+            li.className = 'ing-header';
+            li.innerHTML = '<span class="ing-header-label">' + ing.header + '</span>';
+            ul.appendChild(li);
+            continue;
+          }
+          let result;
+          if (ing.static) {
+            result = ing.render();
+          } else {
+            result = ing.render(ing.base * factor);
+          }
+          const li = document.createElement('li');
+          li.innerHTML = '<span class="qty">' + result.qty + '</span><span class="item">' + result.item + '</span>';
+          ul.appendChild(li);
+        }
+      }
+
+      function halvesLabel(halves) {
+        const peppers = prettyAmount(halves / 2);
+        const perFilling = prettyAmount(halves / 3);
+        return halves + ' halves (' + peppers + ' poblanos) · ' + perFilling + ' per filling';
+      }
+
+      function update(halves) {
+        const factor = halves / ORIGINAL_HALVES;
+        renderList('ing-main', main, factor);
+        document.getElementById('meta-servings').textContent = halves;
+        document.getElementById('label-servings').textContent = halvesLabel(halves);
+      }
+
+      const select = document.getElementById('servings');
+      const decBtn = document.getElementById('decrement');
+      const incBtn = document.getElementById('increment');
+
+      function syncStepperState() {
+        const idx = select.selectedIndex;
+        decBtn.disabled = idx <= 0;
+        incBtn.disabled = idx >= select.options.length - 1;
+      }
+
+      select.addEventListener('change', () => { update(parseInt(select.value, 10)); syncStepperState(); });
+      decBtn.addEventListener('click', () => { if (select.selectedIndex > 0) { select.selectedIndex -= 1; select.dispatchEvent(new Event('change')); } });
+      incBtn.addEventListener('click', () => { if (select.selectedIndex < select.options.length - 1) { select.selectedIndex += 1; select.dispatchEvent(new Event('change')); } });
+
+      update(parseInt(select.value, 10));
+      syncStepperState();
+    </script>
+  </body>
+</html>
