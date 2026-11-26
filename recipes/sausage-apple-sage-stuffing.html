@@ -859,7 +859,7 @@
 
       function plural(n, singular, pluralForm) {
         const formatted = prettyAmount(n);
-        const word = Math.abs(n - 1) < 0.01 ? singular : (pluralForm || singular + 's');
+        const word = n < 1.01 ? singular : (pluralForm || singular + 's');
         return { qty: formatted, item: word };
       }
       const tsp = (n) => prettyAmount(n) + ' tsp';
@@ -871,7 +871,7 @@
         { base: 1, render: (n) => ({ qty: prettyAmount(n) + ' lb', item: 'bulk sage breakfast sausage (or sweet Italian)' }) },
         { base: 1, render: (n) => { const p = plural(n, 'large onion'); return { qty: p.qty, item: p.item + ', diced' }; } },
         { base: 1, render: (n) => { const p = plural(n, 'large Honeycrisp or Granny Smith apple'); return { qty: p.qty, item: p.item + ', peeled and diced' }; } },
-        { base: 2, render: (n) => { const p = plural(n, 'garlic clove'); return { qty: p.qty, item: p.item + ', minced' }; } },
+        { base: 2, render: (n) => { const c = Math.max(1, Math.round(n)); return { qty: String(c), item: (c === 1 ? 'garlic clove' : 'garlic cloves') + ', minced' }; } },
         { base: 6, render: (n) => ({ qty: tbsp(n), item: 'butter (about half what the boxes call for)' }) },
         { base: 4, render: (n) => ({ qty: cup(n), item: 'low-sodium turkey or chicken stock, plus up to ' + cup(n / 8) + ' more if needed' }) },
         { base: 1, render: () => ({ qty: 'To taste', item: 'black pepper' }), static: true },
